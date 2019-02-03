@@ -1,0 +1,264 @@
+\documentclass[12pt,twoside]{article}
+\setlength{\textwidth}{166mm}   % ширина текста
+\setlength{\textheight}{232mm}  % высота текста на странице
+\setlength{\topmargin}{-10mm}   % верхнее поле (+ 1 дюйм)
+\setlength{\headsep}{5mm}       % отступ после колонтитула
+\oddsidemargin=3mm              % левое поле для нечетной страницы (+1 дюйм)
+\evensidemargin=3mm             % левое поле для четной страницы (+1 дюйм)
+\setlength{\baselineskip}{18pt} %
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{epsfig}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{eufrak}
+\usepackage{xcolor}
+
+\renewcommand\le{\leqslant}
+\renewcommand\ge{\geqslant}
+
+\newcommand{\ruText}[1]{{\scriptsize \textcolor{darkgray}{#1} \par}}
+
+% Lines below are to avoid word breaks.
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\renewenvironment{itemize}
+{\begin{list}
+             {\labelitemi}%                     Old parameters:
+             {\setlength{\labelwidth}{1.3em}%        1em
+              \setlength{\labelsep}{0.7em}%          0.7em
+              \setlength{\itemindent}{0em}%          0em
+              \setlength{\listparindent}{3em}%       3em
+              \setlength{\leftmargin}{2em}%          3em !
+              \setlength{\rightmargin}{0em}%         0em
+              \setlength{\parsep}{0ex}%              0ex
+              \setlength{\topsep}{0.5ex}%            2ex !
+              \setlength{\itemsep}{1ex}%             0ex
+             }%
+}
+{\end{list}}%
+
+
+\begin{document}
+\pagestyle{empty}
+
+\subsection*{
+  {\normalsize 1. Выказванні. Лагічныя аперацыі над выказваннямі. Формулы.} \\
+  \indent \ruText{ Высказывания. Логические операции над высказываниями. Формулы.}
+}
+
+\begin{itemize}
+
+\item[1.]
+
+Вылучыце ўмову і вынік тэарэмы, сфармулюйце яе з дапамогай звязкі <<Калі $\ldots$, то $\ldots$>>: \\
+\ruText{ Выделив условие и заключение теоремы, сформулируйте её посредством связки <<Если $\ldots$, то $\ldots$>>: }
+\begin{itemize}
+
+\item[(а)] Для таго, каб функцыя была дыферэнцавальнай ў некаторай кропцы, неабходна, каб яна была непарыўнай у гэтай кропцы; \\
+\ruText{ Для того, чтобы функция была дифференцируемой в некоторой точке, необходимо, чтобы она была непрерывной в этой точке; }
+
+\item[(б)] Неабходнай уласцівасцю простакутніка з'яўляецца роўнасць яго дыяганаляў; \\
+\ruText{ Необходимым свойством прямоугольника является равенство его диагоналей; }
+
+\item[(в)] Для падзельнасці мнагасклада $f(x)$ на лінейны двусклад $x - a$ дастаткова, каб лік $a$ быў коранем гэтага мнагасклада; \\
+\ruText{ Для делимости многочлена $f(x)$ на линейный двучлен $x - a$ достаточно, чтобы число $a$ было корнем этого многочлена; }
+
+\item[(г)] На 5 дзеляцца тыя цэлыя лікі, якія сканчваюцца лічбамі 0 альбо 5; \\
+\ruText{ На 5 делятся те целые числа, которые оканчиваются цифрой 0 или цифрой 5; }
+
+\item[(д)] Дзве простыя на плоскасці паралельныя тады, калі яны перпендыкулярныя адной і той жа простай; \\
+\ruText{ Две прямые на плоскости тогда параллельны, когда они перпендикулярны одной и той же прямой; }
+
+\item[(е)] Камплексныя лікі роўныя, толькі калі роўныя адпаведна іх сапраўдная і ўяўная часткі; \\
+\ruText{ Комплексные числа равны, только если равны соответственно их действительные и мнимые части; }
+
+\item[(ж)] Любое квадратнае ўраўненне з рэчаіснымі каэфіцыэнтамі мае не больш за два рэчаісных кораня; \\
+\ruText{ Всякое квадратное уравнение с действительными коэффициентами имеет не более двух действительных корней; }
+
+\item[(з)] З таго, што чатырохкутнік --- ромб, вынікае, што кожная з яго дыяганаляў з'яўлецца воссю сіметрыі; \\
+\ruText{ Из того, что четырехугольник --- ромб, следует, что каждая из его диагоналей служит его осью симметрии; }
+
+\item[(і)] Цотнасць сумы з'яўляецца неабходнай умовай цотнасці кожнага складніка; \\
+\ruText{ Четность суммы есть необходимое условие четности каждого слагаемого; }
+
+\item[(к)] Роўнасць трыкутнікаў з'яўляецца дастатковай умовай іх роўнавялікасці; \\
+\ruText{ Равенство треугольников есть достаточное условие их равновеликости; }
+
+\item[(л)] Для падзельнасці здабытку на нейкі лік дастаткова, каб прынамсі адзін з множнікаў дзяліўся на гэты лік. \\
+\ruText{ Для делимости произведения на некоторое число достаточно, чтобы по меньшей мере один из сомножителей делился на это число. }
+
+\end{itemize}
+
+\item[2.] Няхай $A$, $B$ і $C$ абазначаюць, адпаведна, наступныя сказы:
+\textit{\guillemotleft Ён чытае коміксы.\guillemotright},
+\textit{\guillemotleft Ён любіць навуковую фантастыку.\guillemotright},
+\textit{\guillemotleft Ён --- студэнт-інфарматык.\guillemotright}.
+Запішыце у сімвалічнай форме выказванне: \textit{\guillemotleft Калі ён чытае коміксы,
+то ён любіць навуковую фантастыку і калі ён не чытае коміксы, то ён ---
+студэнт-інфарматык.\guillemotright} Запішыце адмаўленне гэтага выразу і прадстаўце яго ў выглядзе формулы,
+якая змяшчае толькі аперацыі дыз'юнкцыі, кан'юнкцыі і адмаўлення, прычым адмаўленні могуць распаўсюджвацца
+толькі на прапазіцыйныя зменныя.
+
+\noindent
+\ruText{ Пусть $A$, $B$ и $C$ обозначают соответственно следующие предложения:
+\textit{\guillemotleft Он читает комиксы.\guillemotright},
+\textit{\guillemotleft Он любит научную фантастику.\guillemotright},
+\textit{\guillemotleft Он студент-информатик.\guillemotright}.
+Запишите в символической форме высказывание: \textit{\guillemotleft Если он читает
+комиксы, то он любит научную фантастику и если он не читает комиксы, то он ---
+студент-информатик.\guillemotright} Запишите отрицание этого выражения и представьте
+его в виде формулы, которая содержит только операции дизъюнкции, конъюнкции и
+отрицания, причем отрицания распространяются только на пропозиционные переменные. }
+
+\smallskip
+
+\item[3.] Пабудуйце табліцы праўдзівасці наступных формул: \\
+\ruText{Постройте таблицы истинности следующих формул:}
+\begin{itemize}
+\item[(а)] $(A \to B) \vee (A \to (A \cdot B))$.
+
+\item[(б)] $((A \thicksim B) \to \overline{C}) \cdot (A \vee C)$.
+
+\item[(в)] $(((\overline{A \vee B}) \cdot \overline{C}) \to \overline{B}) \thicksim A$.
+
+\item[(г)] $((\overline{A} \cdot \overline{B}) \to (\overline{\overline{B} \to \overline{A}}))
+\cdot ((A \vee B) \thicksim C)$.
+\end{itemize}
+
+\smallskip
+
+\item[4.] Рашыце наступныя лагічныя ўраўненні: \\
+\ruText{ Решите следующие логические уравнения: }
+\begin{itemize}
+\item[(а)] $(A \to C) \cdot (\overline{(B \to C) \to ((A \vee B) \to C)}) = \text{П}$.
+
+\item[(б)] $((\overline{A \cdot B}) \thicksim C) \to (C \vee \overline{A}) = \text{??}$.
+
+\item[(в)] $(\overline{A \to \overline{B}}) \to ((\overline{A \vee (B \thicksim A)}) \to C) = \text{П}$.
+
+\item[(г)] $((\overline{A \thicksim B}) \cdot (\overline{A \thicksim C})) \to
+(\overline{A \thicksim (B \cdot D)}) = \text{??}$.
+\end{itemize}
+
+\smallskip
+
+\item[5.] Дакажыце наступныя раўназначнасці без выкарыстання табліц праўдзівасці: \\
+\ruText{ Докажите следующие равносильности без использования таблиц истинности: }
+\begin{itemize}
+\item[(а)] $(A \cdot (B \vee \overline{C})) \vee \overline{A} \vee (B \cdot C) \vee
+(A \cdot \overline{C}) \equiv \overline{A} \vee B \vee \overline{C}$.
+
+\item[(б)] $(((((A \to B) \to \overline{A}) \to \overline{B}) \to \overline{C}) \to C)
+\equiv C$.
+
+\item[(в)] $((\overline{(A \cdot B) \to C}) \to (\overline{A \cdot C})) \to ((A \cdot B) \to
+(\overline{A \cdot (B \to C)})) \equiv \overline{A} \vee \overline{B} \vee \overline{C}$.
+
+\item[(г)] $A \to ((A \cdot B) \to (((A \to B) \to B) \cdot C)) \equiv B \to (A \to C)$.
+\end{itemize}
+
+\smallskip
+
+\item[6.] Знайдзіце такую формулу $\boldsymbol{\Phi}$, што: \\
+\ruText{ Найдите такую формулу $\boldsymbol{\Phi}$, что: }
+\begin{itemize}
+\item[(а)] $\vDash ((\boldsymbol{\Phi} \cdot A) \to \overline{B}) \to
+((B \to \overline{A}) \to \boldsymbol{\Phi})$;
+
+\item[(б)] $\vDash (\boldsymbol{\Phi} \to (A \to (B \to C))) \thicksim (\boldsymbol{\Phi} \to (A \to B))$;
+
+\item[(в)] $\vDash (\boldsymbol{\Phi} \cdot (A \vee (B \to C))) \thicksim \boldsymbol{\Phi}$;
+
+\item[(г)] $\vDash ((A \vee \boldsymbol{\Phi}) \thicksim A) \thicksim (\overline{A} \to
+(B \vee \overline{C}))$.
+\end{itemize}
+
+\smallskip
+
+\item[7.] Дакажыце наступныя сцверджанні: \\
+\ruText{ Докажите следующие утверждения: }
+\begin{itemize}
+\item[(а)] калі\, $\vDash \boldsymbol{\mathrm{A}} \vee \boldsymbol{\mathrm{B}}$,\,
+$\vDash \overline{\boldsymbol{\mathrm{A}}} \vee \boldsymbol{\mathrm{C}}$,\,
+то\, $\vDash \boldsymbol{\mathrm{B}} \vee \boldsymbol{\mathrm{C}}$;
+
+\item[(б)] калі\, $\vDash \boldsymbol{\mathrm{A}} \to \boldsymbol{\mathrm{B}}$,\,
+$\vDash \boldsymbol{\mathrm{A}} \cdot \boldsymbol{\mathrm{C}}$,\, то\,
+$\vDash \boldsymbol{\mathrm{B}} \cdot \boldsymbol{\mathrm{C}}$;
+
+\item[(в)] калі\, $\vDash \boldsymbol{\mathrm{A}} \vee \boldsymbol{\mathrm{B}}$,\,
+$\vDash \boldsymbol{\mathrm{A}} \to \boldsymbol{\mathrm{C}}$,\,
+$\vDash \boldsymbol{\mathrm{B}} \to \boldsymbol{\mathrm{D}}$,\, то\,
+$\vDash \boldsymbol{\mathrm{C}} \vee \boldsymbol{\mathrm{D}}$;
+
+\item[(г)] калі\, $\vDash \boldsymbol{\mathrm{A}} \cdot \boldsymbol{\mathrm{B}}$,\,
+$\vDash \boldsymbol{\mathrm{B}} \thicksim \boldsymbol{\mathrm{C}}$,\, то\,
+$\vDash \boldsymbol{\mathrm{D}} \to (\boldsymbol{\mathrm{A}} \cdot \boldsymbol{\mathrm{C}})$.
+\end{itemize}
+
+\smallskip
+
+\item[8.] Высветліце, ці справядлівыя наступныя лагічныя вынікі: \\
+\ruText{ Выясните, верны ли следующие логические следования: }
+\begin{itemize}
+\item[(а)] $\boldsymbol{\mathrm{A}} \to \boldsymbol{\mathrm{B}}$,\,
+$\boldsymbol{\mathrm{D}} \to \overline{\boldsymbol{\mathrm{C}}}$,\,
+$\boldsymbol{\mathrm{C}} \vee \overline{\boldsymbol{\mathrm{B}}}$\,
+$\vDash \boldsymbol{\mathrm{A}} \to \overline{\boldsymbol{\mathrm{D}}}$;
+
+\item[(б)] $\boldsymbol{\mathrm{A}} \to \boldsymbol{\mathrm{B}}$,\, $((\boldsymbol{\mathrm{A}}
+\vee \boldsymbol{\mathrm{D}}) \cdot \boldsymbol{\mathrm{C}}) \to \boldsymbol{\mathrm{E}}$,\,
+$\boldsymbol{\mathrm{D}} \to \boldsymbol{\mathrm{C}}$\, $\vDash ((\boldsymbol{\mathrm{A}} \vee \boldsymbol{\mathrm{D}}) \cdot \boldsymbol{\mathrm{B}}) \to \overline{\boldsymbol{\mathrm{E}}}$;
+
+\item[(в)] $(\boldsymbol{\mathrm{A}} \vee \boldsymbol{\mathrm{B}}) \to (\boldsymbol{\mathrm{C}} \cdot
+\boldsymbol{\mathrm{D}})$,\, $(\boldsymbol{\mathrm{D}} \vee \boldsymbol{\mathrm{E}}) \to
+\boldsymbol{\mathrm{F}}$\, $\vDash \boldsymbol{\mathrm{A}} \to \boldsymbol{\mathrm{F}}$;
+
+\item[(г)] $(\boldsymbol{\mathrm{A}} \cdot \boldsymbol{\mathrm{B}}) \to \boldsymbol{\mathrm{C}}$,\,
+$(\boldsymbol{\mathrm{C}} \cdot \boldsymbol{\mathrm{D}}) \to \boldsymbol{\mathrm{E}}$,\,
+$\overline{\boldsymbol{\mathrm{F}}} \to (\boldsymbol{\mathrm{D}} \cdot \boldsymbol{\mathrm{E}})$\,
+$\vDash (\boldsymbol{\mathrm{A}} \cdot \boldsymbol{\mathrm{B}}) \to \boldsymbol{\mathrm{F}}$.
+\end{itemize}
+
+\smallskip
+
+\item[9.] Высветліце, ці справядлівыя наступныя сцверджанні: \\
+\ruText{ Выясните, верны ли следующие утверждения: }
+\begin{itemize}
+\item[(а)] калі\, $\boldsymbol{\Gamma} \vDash \boldsymbol{\mathrm{A}}$\, і\, $\boldsymbol{\Gamma}
+\vDash \boldsymbol{\mathrm{B}}$,\, то\, $\boldsymbol{\Gamma} \vDash \boldsymbol{\mathrm{A}} \cdot
+\boldsymbol{\mathrm{B}}$;
+
+\item[(б)] $\boldsymbol{\Gamma} \vDash \boldsymbol{\mathrm{A}} \to \boldsymbol{\mathrm{B}}$\, тады
+і толькі тады, калі\, $\boldsymbol{\Gamma},\, \overline{\boldsymbol{\mathrm{A}}} \vDash \boldsymbol{\mathrm{B}}$;
+
+\item[(в)] калі\, $\boldsymbol{\Gamma},\, \boldsymbol{\mathrm{A}} \vDash \boldsymbol{\mathrm{B}}$\, і\,
+$\boldsymbol{\Gamma},\, \boldsymbol{\mathrm{A}} \vDash \overline{\boldsymbol{\mathrm{B}}}$,\, то\,
+$\boldsymbol{\Gamma} \vDash \overline{\boldsymbol{\mathrm{A}}}$;
+
+\item[(г)] $\boldsymbol{\Gamma} \vDash \boldsymbol{\mathrm{A}} \to (\boldsymbol{\mathrm{B}}
+\to \boldsymbol{\mathrm{C}})$\, тады і толькі тады, калі\, $\boldsymbol{\Gamma} \vDash (\boldsymbol{\mathrm{A}} \cdot \boldsymbol{\mathrm{B}}) \to \boldsymbol{\mathrm{C}}$.
+\end{itemize}
+(Тут $\boldsymbol{\Gamma}$ --- канечнае мноства формул, магчыма пустое.) \\
+\ruText{ (Здесь $\boldsymbol{\Gamma}$ --- конечное множество формул, возможно пустое.) }
+\end{itemize}
+
+
+
+
+\end{document}
+
+
+
+$\boldsymbol{\mathfrak{A}}, \boldsymbol{\mathfrak{B}}, \boldsymbol{\mathfrak{C}}, \boldsymbol{\mathfrak{D}},
+\boldsymbol{\mathfrak{E}}, \boldsymbol{\mathfrak{F}}, \boldsymbol{\mathfrak{G}}, \boldsymbol{\mathfrak{H}},
+\boldsymbol{\mathfrak{I}}, \boldsymbol{\mathfrak{J}}, \boldsymbol{\mathfrak{K}}, \boldsymbol{\mathfrak{L}},
+\boldsymbol{\mathfrak{M}}, \boldsymbol{\mathfrak{N}}, \boldsymbol{\mathfrak{O}}, \boldsymbol{\mathfrak{P}},
+\boldsymbol{\mathfrak{Q}}, \boldsymbol{\mathfrak{R}}, \boldsymbol{\mathfrak{S}}, \boldsymbol{\mathfrak{T}},
+\boldsymbol{\mathfrak{U}}, \boldsymbol{\mathfrak{V}}, \boldsymbol{\mathfrak{W}}, \boldsymbol{\mathfrak{X}},
+\boldsymbol{\mathfrak{Y}}, \boldsymbol{\mathfrak{Z}}$

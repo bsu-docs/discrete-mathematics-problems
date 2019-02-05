@@ -1,0 +1,46 @@
+\documentclass[12pt,twoside]{article}
+
+\setlength{\textwidth}{166mm}
+\setlength{\textheight}{232mm}
+\setlength{\topmargin}{-10mm}
+\setlength{\headsep}{5mm}
+\oddsidemargin=3mm
+\evensidemargin=3mm
+\setlength{\baselineskip}{18pt}
+
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{amsfonts,amssymb,amsmath}
+\usepackage{epsfig}
+\usepackage{mathrsfs}
+\usepackage{mathabx}
+\usepackage{xcolor}
+
+\renewcommand\le{\leqslant}
+\renewcommand\ge{\geqslant}
+
+\input{../common/commands}
+
+% Lines below are to avoid word breaks.
+\tolerance=1
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\hbadness=10000
+
+\renewenvironment{itemize}
+{\begin{list}
+             {\labelitemi}%                     Old parameters:
+             {\setlength{\labelwidth}{1.3em}%        1em
+              \setlength{\labelsep}{0.7em}%          0.7em
+              \setlength{\itemindent}{0em}%          0em
+              \setlength{\listparindent}{3em}%       3em
+              \setlength{\leftmargin}{2em}%          3em !
+              \setlength{\rightmargin}{0em}%         0em
+              \setlength{\parsep}{0ex}%              0ex
+              \setlength{\topsep}{0.5ex}%            2ex !
+              \setlength{\itemsep}{1ex}%             0ex
+             }
+}
+{\end{list}}
+
+\pagestyle{empty}

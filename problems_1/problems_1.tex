@@ -1,54 +1,11 @@
-\documentclass[12pt,twoside]{article}
-\setlength{\textwidth}{166mm}   % ширина текста
-\setlength{\textheight}{232mm}  % высота текста на странице
-\setlength{\topmargin}{-10mm}   % верхнее поле (+ 1 дюйм)
-\setlength{\headsep}{5mm}       % отступ после колонтитула
-\oddsidemargin=3mm              % левое поле для нечетной страницы (+1 дюйм)
-\evensidemargin=3mm             % левое поле для четной страницы (+1 дюйм)
-\setlength{\baselineskip}{18pt} %
-\usepackage[utf8]{inputenc}
-\usepackage[russian]{babel}
-\usepackage{amsfonts,amssymb,amsmath}
-\usepackage{epsfig}
-\usepackage{mathrsfs}
-\usepackage{mathabx}
-\usepackage{eufrak}
-\usepackage{xcolor}
-
-\renewcommand\le{\leqslant}
-\renewcommand\ge{\geqslant}
-
-\newcommand{\ruText}[1]{{\scriptsize \textcolor{darkgray}{#1} \par}}
-
-% Lines below are to avoid word breaks.
-\tolerance=1
-\emergencystretch=\maxdimen
-\hyphenpenalty=10000
-\hbadness=10000
-
-\renewenvironment{itemize}
-{\begin{list}
-             {\labelitemi}%                     Old parameters:
-             {\setlength{\labelwidth}{1.3em}%        1em
-              \setlength{\labelsep}{0.7em}%          0.7em
-              \setlength{\itemindent}{0em}%          0em
-              \setlength{\listparindent}{3em}%       3em
-              \setlength{\leftmargin}{2em}%          3em !
-              \setlength{\rightmargin}{0em}%         0em
-              \setlength{\parsep}{0ex}%              0ex
-              \setlength{\topsep}{0.5ex}%            2ex !
-              \setlength{\itemsep}{1ex}%             0ex
-             }%
-}
-{\end{list}}%
-
+\input{../common/preamble}
 
 \begin{document}
-\pagestyle{empty}
 
-\subsection*{
-  {\normalsize 1. Выказванні. Лагічныя аперацыі над выказваннямі. Формулы.} \\
-  \indent \ruText{ Высказывания. Логические операции над высказываниями. Формулы.}
+\biLangHeader{
+  1. Выказванні. Лагічныя аперацыі над выказваннямі. Формулы.
+}{
+  Высказывания. Логические операции над высказываниями. Формулы.
 }
 
 \begin{itemize}
@@ -77,7 +34,7 @@
 \item[(е)] Камплексныя лікі роўныя, толькі калі роўныя адпаведна іх сапраўдная і ўяўная часткі; \\
 \ruText{ Комплексные числа равны, только если равны соответственно их действительные и мнимые части; }
 
-\item[(ж)] Любое квадратнае ўраўненне з рэчаіснымі каэфіцыэнтамі мае не больш за два рэчаісных кораня; \\
+\item[(ж)] Любое квадратнае раўнанне з рэчаіснымі каэфіцыентамі мае не больш за два рэчаісных кораня; \\
 \ruText{ Всякое квадратное уравнение с действительными коэффициентами имеет не более двух действительных корней; }
 
 \item[(з)] З таго, што чатырохкутнік --- ромб, вынікае, што кожная з яго дыяганаляў з'яўлецца воссю сіметрыі; \\
@@ -132,7 +89,7 @@
 
 \smallskip
 
-\item[4.] Рашыце наступныя лагічныя ўраўненні: \\
+\item[4.] Рашыце наступныя лагічныя раўнанні: \\
 \ruText{ Решите следующие логические уравнения: }
 \begin{itemize}
 \item[(а)] $(A \to C) \cdot (\overline{(B \to C) \to ((A \vee B) \to C)}) = \text{П}$.
@@ -248,17 +205,4 @@ $\boldsymbol{\Gamma} \vDash \overline{\boldsymbol{\mathrm{A}}}$;
 \ruText{ (Здесь $\boldsymbol{\Gamma}$ --- конечное множество формул, возможно пустое.) }
 \end{itemize}
 
-
-
-
 \end{document}
-
-
-
-$\boldsymbol{\mathfrak{A}}, \boldsymbol{\mathfrak{B}}, \boldsymbol{\mathfrak{C}}, \boldsymbol{\mathfrak{D}},
-\boldsymbol{\mathfrak{E}}, \boldsymbol{\mathfrak{F}}, \boldsymbol{\mathfrak{G}}, \boldsymbol{\mathfrak{H}},
-\boldsymbol{\mathfrak{I}}, \boldsymbol{\mathfrak{J}}, \boldsymbol{\mathfrak{K}}, \boldsymbol{\mathfrak{L}},
-\boldsymbol{\mathfrak{M}}, \boldsymbol{\mathfrak{N}}, \boldsymbol{\mathfrak{O}}, \boldsymbol{\mathfrak{P}},
-\boldsymbol{\mathfrak{Q}}, \boldsymbol{\mathfrak{R}}, \boldsymbol{\mathfrak{S}}, \boldsymbol{\mathfrak{T}},
-\boldsymbol{\mathfrak{U}}, \boldsymbol{\mathfrak{V}}, \boldsymbol{\mathfrak{W}}, \boldsymbol{\mathfrak{X}},
-\boldsymbol{\mathfrak{Y}}, \boldsymbol{\mathfrak{Z}}$

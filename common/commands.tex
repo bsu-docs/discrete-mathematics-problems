@@ -7,4 +7,25 @@
     {\normalsize #1} \\
     \indent \ruText{#2}
   }
+  \vspace{5mm}
 }
+
+\makeatletter
+\def\belarusianLetters#1{
+  \expandafter\@belarusianLetters\csname c@#1\endcsname
+}
+\def\@belarusianLetters#1{
+  (%
+  \ifcase#1\or а\or б\or в\or г\or д\or е\or ж\or з\or і\or к\or л\or м\fi%
+  )
+}
+\makeatother
+\AddEnumerateCounter{\belarusianLetters}{\@belarusianLetters}{Ы}
+
+\newenvironment{problemList}
+  {\begin{enumerate}[leftmargin=*,topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]}
+  {\end{enumerate}}
+
+\newenvironment{belarusianEnumerate}
+  {\begin{enumerate}[label=\belarusianLetters*,topsep=0pt]}
+  {\end{enumerate}}

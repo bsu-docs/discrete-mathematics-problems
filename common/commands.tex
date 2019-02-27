@@ -1,5 +1,5 @@
 \newcommand{\ruText}[1]{
-  {\scriptsize \textcolor{darkgray}{#1} \par}
+  {\small \textcolor{darkgray}{#1} \par}
 }
 
 \newcommand{\biLangHeader}[2]{
@@ -8,6 +8,25 @@
     \indent \ruText{#2}
   }
   \vspace{5mm}
+}
+
+\newcommand{\problemItemSimple}[2]{%
+	\item #1 \\%
+	\ruText{#2}%
+}
+
+\newcommand{\problemItemWithCommonPart}[3]{%
+	\item #1 \\%
+	\ruText{#2}%
+	#3%
+}
+
+\newcommand{\problemItemWithCommonPartComplicated}[5]{%
+	\item #1 \\%
+	\ruText{#2}%
+	#3 
+	#4 \\%
+	\ruText{#5}%
 }
 
 \makeatletter

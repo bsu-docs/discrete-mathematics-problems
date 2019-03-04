@@ -1,0 +1,109 @@
+\input{../common/preamble}
+
+\begin{document}
+
+\biLangHeader{5. Адлюстраванні.}{Отображения.}
+
+\begin{problemList}
+
+\problemItemWithCommonPart
+{Няхай $f \colon X \to Y$ --- адвольнае адлюстраванне;
+$A_i \subseteq X$ і $B_i \subseteq Y$, дзе $i = 1, 2, \ldots, n$. 
+Дакажыце наступныя ўласцівасці вобразаў і правобразаў:}
+{Пусть $f \colon X \to Y$ --- произвольное отображение; 
+$A_i \subseteq X$ и $B_i \subseteq Y$, где $i = 1, 2, \ldots, n$.
+Докажите следующие свойства образов и прообразов:}
+{%
+\begin{belarusianEnumerate}
+	
+\item $f(A_1 \cup A_2 \cup \ldots \cup A_n) = f(A_1) \cup f(A_2) \cup \ldots \cup f(A_n)$;
+
+\item $f^{-1}(B_1 \cup B_2 \cup \ldots \cup B_n) = f^{-1}(B_1) \cup f^{-1}(B_2) \cup \ldots \cup f^{-1}(B_n)$;
+
+\item $f(A_1 \cap A_2 \cap \ldots \cap A_n) \subseteq f(A_1) \cap f(A_2) \cap \ldots \cap f(A_n)$;
+
+\item $f^{-1}(B_1 \cap B_2 \cap \ldots \cap B_n) = f^{-1}(B_1) \cap f^{-1}(B_2) \cap \ldots \cap f^{-1}(B_n)$.
+	
+\end{belarusianEnumerate}
+}
+
+\bigskip
+
+\problemItemSimple
+{Няхай $U$ --- універсальнае мноства, $S, T \subseteq U$ --- фіксаваныя падмноствы мноства $U$. Вызначым адлюстраванне $f \colon 2^U \to 2^U$ як $f(A) = T \cap (S \cup A)$. Знайдзіце $f^{(2)}$. Высветліце, чаму роўнае $f^{(n)}$ пры $n > 2$.}
+{Пусть $U$ --- универсальное множество, $S, T \subseteq U$ --- фиксированные подмножества множества $U$. Определим отображение $f \colon 2^U \to 2^U$ как $f(A) = T \cap (S \cup A)$. Найдите $f^{(2)}$. Выясните, чему равно $f^{(n)}$ при $n > 2$.}
+
+\bigskip
+
+\problemItemSimple
+{Адлюстраванні $f, g, h \colon 2^{\mathbbmss{N}} \times 2^{\mathbbmss{N}} \to 2^{\mathbbmss{N}}$ зададзены наступным чынам: $f(A, B) = A \cap B$,
+$g(A, B) = A \cup B$, $h(A, B) = A \oplus B$. Высветліце, якія з гэтых адлюстраванняў з'яўляюцца ін'ектыўнымі, сюр'ектыўнымі і біектыўнымі. Вызначыце, якія з указаных ніжэй мностваў не з'яўляюцца канечнымі, і пералічыце элементы канечных мностваў: $f^{-1}(\emptyset)$,
+$g^{-1}(\emptyset)$, $h^{-1}(\emptyset)$, $f^{-1}(\{1\})$,
+$g^{-1}(\{2\})$, $h^{-1}(\{3\})$, $f^{-1}(\{4, 7\})$,
+$g^{-1}(\{8, 12\})$, $h^{-1}(\{5, 9\})$.}
+{Отображения $f, g, h \colon 2^{\mathbbmss{N}} \times 2^{\mathbbmss{N}} \to 2^{\mathbbmss{N}}$ заданы следующим образом: $f(A, B) = A \cap B$, $g(A, B) = A \cup B$, $h(A, B) = A \oplus B$. Выясните, какие из этих отображений являются инъективными, сюръективными и биективными. Установите, какие из указанных ниже множеств не являются конечными, и перечислите элементы конечных множеств: $f^{-1}(\emptyset)$, 
+$g^{-1}(\emptyset)$, $h^{-1}(\emptyset)$, $f^{-1}(\{1\})$, 
+$g^{-1}(\{2\})$, $h^{-1}(\{3\})$, $f^{-1}(\{4, 7\})$,  
+$g^{-1}(\{8, 12\})$, $h^{-1}(\{5, 9\})$.}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Высветліце, для якіх значэнняў $n \in \mathbbmss{N}$ адлюстраванне $f_n \colon \mathbbmss{N} \cup \{0\} \to \mathbbmss{N}$ з'яўляецца ін'ектыўным, сюр'ектыўным, біектыўным:}
+{Выясните, для каких значений $n \in \mathbbmss{N}$ отображение $f_n \colon \mathbbmss{N} \cup \{0\} \to \mathbbmss{N}$ является инъективным, сюръективным, биективным:}
+{%
+\begin{equation*}
+f_n(k) =
+\begin{cases}
+n - k, \quad \text{калі $k < n$;} \\
+n + k, \quad \text{калі $k \ge n$.}
+\end{cases}
+\end{equation*}
+}
+
+\bigskip
+
+\problemItemSimple
+{Высветліце, ці з'яўляецца адлюстраванне $f \colon \mathbbmss{N} \cup \{0\} \to \mathbbmss{Z}$, $f(n) = (-1)^{n + 1}\bigl\lfloor\frac{n + 1}{2}\bigr\rfloor$ біектыўным? Калі адлюстраванне біектыўнае, то знайдзіце адваротнае да $f$ адлюстраванне.}
+{Выясните, является ли отображение $f \colon \mathbbmss{N} \cup \{0\} \to \mathbbmss{Z}$, $f(n) = (-1)^{n + 1}\bigl\lfloor\frac{n + 1}{2}\bigr\rfloor$ биективным? Если отображение биективно, то найдите обратное к $f$ отображение.}
+
+\bigskip
+
+\problemItemSimple
+{%
+Адлюстраванне $f \colon X \to Y$ называецца \textit{абарачальным злева} (\textit{справа}), калі існуе такое адлюстраванне $f_l^{-1} \colon Y \to X$ ($f_r^{-1} \colon Y \to X$), што $f_l^{-1} \circ f = e_X$ ($f \circ f_r^{-1} = e_Y$).
+Адлюстраванне $f \colon X \to Y$ называецца \textit{абарачальным}, калі існуе такое адлюстраванне $f^{-1} \colon Y \to X$, што $f^{-1} \circ f = e_X$ і $f \circ f^{-1} = e_Y$.
+Дакажыце, што
+\begin{belarusianEnumerate}
+	
+\item $f \colon X \to Y$ абарачальнае злева тады і толькі тады, калі $f$ 
+ін'ектыўнае;
+\item $f \colon X \to Y$ абарачальнае справа тады і толькі тады, калі $f$ 
+сюр'ектыўнае;
+\item $f \colon X \to Y$ абарачальнае тады і толькі тады, калі $f$ біектыўнае.
+	
+\end{belarusianEnumerate}
+% <workaround>
+\textbf{}
+\vspace{-1.5em}
+% </workaround>
+}
+{%
+Отображение $f \colon X \to Y$ называется \textit{обратимым слева} 
+(\textit{справа}), если существует такое отображение $f_l^{-1} \colon Y \to X$
+($f_r^{-1} \colon Y \to X$), что $f_l^{-1} \circ f = e_X$ ($f \circ f_r^{-1} = e_Y$).
+Отображение $f \colon X \to Y$ называется \textit{обратимым}, если существует
+такое отображение $f^{-1} \colon Y \to X$, что $f^{-1} \circ f = e_X$ и $f \circ f^{-1} = e_Y$.
+Докажите, что
+\begin{russianEnumerate}
+	\item $f \colon X \to Y$ обратимо слева тогда и только тогда, когда $f$ 
+	инъективно;
+	\item $f \colon X \to Y$ обратимо справа тогда и только тогда, когда $f$ сюръективно;
+	\item $f \colon X \to Y$ обратимо тогда и только тогда, когда $f$ 
+	биективно.			
+\end{russianEnumerate}
+}
+
+\end{problemList}
+
+\end{document}

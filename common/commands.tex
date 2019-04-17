@@ -1,13 +1,12 @@
 \newcommand{\ruText}[1]{
-  {\small \textcolor{darkgray}{#1} \par}
+  {\footnotesize \textcolor{darkgray}{#1} \par}
 }
 
 \newcommand{\biLangHeader}[2]{
-  \subsection*{
-    {\normalsize #1} \\
-    \indent \ruText{#2}
-  }
-  \vspace{5mm}
+  \subsection*{%
+  	#1 \\%
+  	\ruText{#2}%
+  }%
 }
 
 \newcommand{\quizTitle}[3]{%
@@ -53,10 +52,10 @@
   {\end{enumerate}}
 
 \newenvironment{belarusianEnumerate}
-  {\begin{enumerate}[label=\belarusianLetters*,topsep=0pt]}
-  {\end{enumerate}}
+  {\begin{enumerate}[label=\belarusianLetters*, topsep=-7pt]}
+  {\end{enumerate} \textbf{}\vspace{-8pt}}
 
 \AddEnumerateCounter{\asbuk}{\@asbuk}{\cyrm}
 \newenvironment{russianEnumerate}
   {\begin{enumerate}[label=(\asbuk*), topsep=-4pt, itemsep=-1ex]}
-  {\end{enumerate}}
+  {\end{enumerate}\textbf{}\vspace{-11pt}}

@@ -7,7 +7,7 @@
 {Высказывания. Логические операции над высказываниями. Таблицы истинности.}
 
 \begin{problemList}
-	
+
 \problemItemSimple
 {Вылучыце ўмову і вынік тэарэмы, сфармулюйце яе з дапамогай звязкі <<Калі $\ldots$, то $\ldots$>>:}
 {Выделив условие и заключение теоремы, сформулируйте её посредством связки <<Если $\ldots$, то $\ldots$>>:}
@@ -43,8 +43,8 @@
 {Всякое квадратное уравнение с действительными коэффициентами имеет не более двух действительных корней;}
 
 \problemItemSimple
-{З таго, што чатырохкутнік --- ромб, вынікае, што кожная з яго дыяганаляў з'яўлецца воссю сіметрыі;}
-{Из того, что четырехугольник --- ромб, следует, что каждая из его диагоналей служит его осью симметрии;}
+{З таго, што чатырохкутнік "--- ромб, вынікае, што кожная з яго дыяганаляў з'яўлецца воссю сіметрыі;}
+{Из того, что четырехугольник "--- ромб, следует, что каждая из его диагоналей служит его осью симметрии;}
 
 \problemItemSimple
 {Цотнасць сумы з'яўляецца неабходнай умовай цотнасці кожнага складніка;}
@@ -60,15 +60,15 @@
 
 \end{belarusianEnumerate}
 
-\bigskip
+\smallskip
 
 \problemItemSimple
 {Няхай $A$, $B$ і $C$ абазначаюць, адпаведна, наступныя сказы:
 \textit{<<Ён чытае коміксы.>>},
 \textit{<<Ён любіць навуковую фантастыку.>>},
-\textit{<<Ён --- студэнт-інфарматык.>>}.
+\textit{<<Ён "--- студэнт-інфарматык.>>}.
 Запішыце у сімвалічнай форме выказванне: \textit{<<Калі ён чытае коміксы,
-то ён любіць навуковую фантастыку і калі ён не чытае коміксы, то ён ---
+то ён любіць навуковую фантастыку і калі ён не чытае коміксы, то ён "---
 студэнт-інфарматык.>>} Запішыце адмаўленне гэтага выразу і прадстаўце яго ў выглядзе формулы,
 якая змяшчае толькі аперацыі дыз'юнкцыі, кан'юнкцыі і адмаўлення, прычым адмаўленні могуць распаўсюджвацца
 толькі на прапазіцыйныя зменныя.}
@@ -77,7 +77,7 @@
 \textit{<<Он любит научную фантастику.>>},
 \textit{<<Он студент-информатик.>>}.
 Запишите в символической форме высказывание: \textit{<<Если он читает
-комиксы, то он любит научную фантастику и если он не читает комиксы, то он ---
+комиксы, то он любит научную фантастику и если он не читает комиксы, то он "---
 студент-информатик.>>} Запишите отрицание этого выражения и представьте
 его в виде формулы, которая содержит только операции дизъюнкции, конъюнкции и
 отрицания, причем отрицания распространяются только на пропозиционные переменные.}
@@ -89,33 +89,26 @@
 {Постройте таблицы истинности следующих формул:}
 {%
 \begin{belarusianEnumerate}
-
-\item $(A \to B) \vee (A \to (A \cdot B))$.
-\item $((A \thicksim B) \to \overline{C}) \cdot (A \vee C)$.
-\item $(((\overline{A \vee B}) \cdot \overline{C}) \to \overline{B}) \thicksim A$.
-\item $((\overline{A} \cdot \overline{B}) \to (\overline{\overline{B} \to \overline{A}}))
+	\item $(A \to B) \vee (A \to (A \cdot B))$.
+	\item $((A \thicksim B) \to \overline{C}) \cdot (A \vee C)$.
+	\item $(((\overline{A \vee B}) \cdot \overline{C}) \to \overline{B}) \thicksim A$.
+	\item $((\overline{A} \cdot \overline{B}) \to (\overline{\overline{B} \to \overline{A}}))
 \cdot ((A \vee B) \thicksim C)$.
-
 \end{belarusianEnumerate}
 }
 
-\bigskip
+\smallskip
 
 \problemItemWithCommonPart
 {Рашыце наступныя лагічныя раўнанні:}
 {Решите следующие логические уравнения:}
 {%
 \begin{belarusianEnumerate}
-
-\item $(A \to C) \cdot (\overline{(B \to C) \to ((A \vee B) \to C)}) = \text{П \textit{(Праўда)}}$.
-
-\item $((\overline{A \cdot B}) \thicksim C) \to (C \vee \overline{A}) = \text{Н \textit{(Няпраўда)}}$.
-
-\item $(\overline{A \to \overline{B}}) \to ((\overline{A \vee (B \thicksim A)}) \to C) = \text{П}$.
-
-\item $((\overline{A \thicksim B}) \cdot (\overline{A \thicksim C})) \to
+	\item $(A \to C) \cdot (\overline{(B \to C) \to ((A \vee B) \to C)}) = \text{П \textit{(Праўда)}}$.
+	\item $((\overline{A \cdot B}) \thicksim C) \to (C \vee \overline{A}) = \text{Н \textit{(Няпраўда)}}$.
+	\item $(\overline{A \to \overline{B}}) \to ((\overline{A \vee (B \thicksim A)}) \to C) = \text{П}$.
+	\item $((\overline{A \thicksim B}) \cdot (\overline{A \thicksim C})) \to
 (\overline{A \thicksim (B \cdot D)}) = \text{Н}$.
-
 \end{belarusianEnumerate}
 }
 

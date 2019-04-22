@@ -4,7 +4,9 @@
 
 Use `Squash and merge` when merging Pull Requests.
 
-### lfs 
+We use **spaces**. One indentation level is 4 spaces.
+
+### lfs
 
 - installing to mac: `brew install git-lfs`;
 - installing at repo: `git lfs install --skip-smudge`;

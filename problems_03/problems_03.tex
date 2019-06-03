@@ -1,4 +1,8 @@
-\input{../common/preamble}
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../common/}{preamble}
+\graphicspath{{figures/}}
 
 \begin{document}
 
@@ -57,7 +61,7 @@
 Студент не обходится четырьмя часами сна.
 Следует ли отсюда, что студент должен или пропустить завтра занятие, или не ходить вечером на дискотеку?}
 
-\newpage
+\bigskip
 
 \problemItemSimple
 {Калі будзе халодна~$(A)$, то студэнт апране цёплую куртку~$(B)$, калі рукаў будзе палатаны~$(C)$.
@@ -137,16 +141,18 @@
 {%
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=140mm]{figure_01}
+        \includegraphics[width=130mm]{figure_01}
     \end{center}
 \end{figure}
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=140mm]{figure_02}
+        \includegraphics[width=130mm]{figure_02}
     \end{center}
 \end{figure}
 }
+
+\smallskip
 
 \problemItemWithCommonPart
 {Пабудуйце рэлейна-кантактныя схемы па зададзеных функцыях праводнасці і ўказанай колькасці кантактаў $h$:}

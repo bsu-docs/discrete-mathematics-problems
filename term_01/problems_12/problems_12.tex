@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+
+\begin{document}
+
+\biLangHeader
+{12. Разбіцці мностваў і лікаў.}
+{Разбиения множеств и чисел.}
+
+\begin{problemList}
+
+\problemItemWithCommonPart
+{Упэўніцеся, што:}
+{Проверьте, что:}
+{%
+\begin{belarusianEnumerate}
+    \item $S(n, k) = 0$ для $k > n$; $S(n, 0) = 0$ і $S(n, 1) = S(n, n) = 1$ для $n \ge 1$;
+    \item $S(n, 2) = 2^{n - 1} - 1$, $n \ge 2$;
+    \item $S(n, n - 1) = C_n^2$, $n \ge 2$;
+    \item $S(n, n - 2) = C_n^3 + 3 \cdot C_n^4$, $n \ge 3$;
+    \item $S(n, n - 3) = C_n^4 + 10 \cdot C_n^5 + 15 \cdot C_n^6$, $n \ge 4$;
+    \item $S(n, k) = k \cdot S(n - 1, k) + S(n - 1, k - 1)$, дзе $n \ge k \ge 1$ "--- цэлыя лікі,
+    $S(0, 0) = \\ = S(n, n) = 1$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemSimple
+{Сярод 12 дзяцей ёсць дзве пары блізнятаў. Колькі ёсць спосабаў разбіць 12 дзяцей
+на 4 групы так, каб блізняты не трапілі ў розныя групы?}
+{Среди 12 детей есть две пары близнецов. Сколькими способами можно разбить
+12 детей на 4 группы так, чтобы близнецы не попали в разные группы?}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Дакажыце, што для натуральных лікаў $n$ і $k$, дзе $n \ge k$,
+справядлівая роўнасць:}
+{Докажите, что для натуральных чисел $n$ и $k$, где $n \ge k$,
+имеет место равенство:}
+{$S(n + 1, k) = \sum\limits_{i = 0}^n C_n^i S(n - i, k - 1)$.}
+
+\bigskip
+
+\problemItemSimple
+{Няхай $B(n) = \sum\limits_{k = 1}^n S(n, k)$ і $B(0) = 1$. Дакажыце,
+што для лікаў $B(n)$ мае месца роўнасць $B(n + 1) = \sum\limits_{k = 0}^n B(k)C_n^k$.
+Няхай $X$ "--- канечнае $n$-элементнае мноства. Дакажыце, што колькасць усіх
+стасункаў эквівалентнасці на мностве $X$ роўная~$B(n)$.}
+{Пусть $B(n) = \sum\limits_{k = 1}^n S(n, k)$ и $B(0) = 1$. Докажите,
+что для чисел $B(n)$ имеет место равенство $B(n + 1) = \sum\limits_{k = 0}^n B(k)C_n^k$.
+Пусть $X$ "--- конечное $n$-элементное множество. Докажите, что число всех
+отношений эквивалентности на множестве $X$ равно~$B(n)$.}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Упэўніцеся, што:}
+{Проверьте, что:}
+{%
+\begin{belarusianEnumerate}
+    \item $p_k(n) = 0$ для $k > n$; $p_1(n) = p_n(n) = 1$ для $n \ge 1$; $p_{n - 1}(n) = 1$ для $n \ge 2$;
+    \item $p_2(n) = \bigl\lfloor \frac{n}{2} \bigr\rfloor$ для $n \ge 2$;
+    \item $p_3(n) = \frac{(n - 1)(n - 2)}{12} + \frac{1}{2} + \frac{1}{2} \cdot \bigl\lfloor
+    \frac{n - 3}{2} \bigr\rfloor + \frac{1}{3} \cdot \bigl\lfloor \frac{n - 3}{3} \bigr\rfloor -
+    \frac{1}{3} \cdot \bigl\lfloor \frac{n - 4}{3}\bigr\rfloor$, $n \ge 4$;
+    \item $p_k(n) = p_{k - 1}(n - 1) + p_k(n - k)$, дзе $n \ge k \ge 1$ "--- цэлыя лікі,
+    $p_k(n) = 0$ для $k > n$, $p_0(n) = 0$ для $n \ge 1$, $p_0(0) = 1$.
+\end{belarusianEnumerate}
+}
+
+\end{problemList}
+
+\end{document}

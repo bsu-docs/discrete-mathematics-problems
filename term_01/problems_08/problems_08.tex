@@ -1,0 +1,136 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+
+\begin{document}
+
+\biLangHeader{8. Логіка прэдыкатаў.}{Логика предикатов.}
+
+\begin{problemList}
+
+\problemItemWithCommonPart
+{Для кожнага з наступных выказванняў знайдзіце прэдыкат (аднамесны ці мнагамесны), які ператвараецца ў дадзенае выказванне пры замене прадметных зменных прыдатнымі значэннямі з адпаведных абсягаў:}
+{Для каждого из следующих высказываний найдите предикат (одноместный или многоместный), который обращается в данное высказывание при замене предметных переменных подходящими значениями из соответствующих областей:}
+{%
+\begin{belarusianEnumerate}
+    \item <<$3 + 4 = 7$>>;
+    \item <<$3 | 12$>>;
+    \item <<$\tg(\pi/4) = 1$>>;
+    \item <<$(-1) + (-3) + 4 = 0$>>.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Вызначыце, якія з наступных выказванняў з'яўляюцца праўдзівымі, а якія непраўдзівымі, калі вядома, што ўсе зменныя прабягаюць мноства $\mathbbmss{R}$.}
+{Определите, какие из следующих высказываний являются истинными, а какие ложными, если известно, что все переменные пробегают множество $\mathbbmss{R}$.}
+{%
+\begin{belarusianEnumerate}
+    \item $\forall x \, \exists y \,\, (x + y = 7)$;
+    \item $\exists y \, \forall x \,\, (x + y = 7)$;
+    \item $\exists x \, \forall y \,\, (x + y = 7)$;
+    \item $\forall x \, \forall y \,\, (x + y = 7)$;
+    \item $(\exists x \, \forall y \,\, (x^2 + y^2 = 16)) \to (3 = 4)$;
+    \item $\forall x \, ((x^2 > x) \thicksim ((x > 1) \vee (x < 0))$;
+    \item $\forall b \, \exists a \, \forall x \,\, (x^2 + ax + b > 0)$;
+    \item $\forall x \,\, (((x > 1) \vee (x < 2)) \thicksim (x = x))$;
+    \item $\exists b \, \exists a \, \exists x \,\, (x^2 + ax + b = 0)$;
+    \item $\exists a \, \forall b \, \exists x \,\, (x^2 + ax + b = 0)$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemSimple
+{З прэдыката $D(x, y) = \text{<<} x \,\,\text{дзеліць}\,\, y\text{>>}$ ($x, y \in \mathbbmss{N})$ з дапамогай квантараў пабудуйце ўсе магчымыя выказванні і вызначыце, якія з іх праўдзівыя, а якія непраўдзівыя.}
+{Из предиката $D(x, y) = \text{<<} x \,\,\text{делит}\,\,
+y\text{>>}$ ($x, y \in \mathbbmss{N}$) с помощью
+кванторов постройте всевозможные высказывания и определите, какие из
+них истинны, а какие ложны.}
+
+\bigskip
+
+\problemItemSimple
+{%
+Няхай $P(x)$ і $Q(x)$ "--- такія аднамесныя прэдыкаты, зададзеныя над адным і тым жа мноствам $M$, што выказванне
+\begin{belarusianEnumerate}
+    \item $\exists x \,\, (P(x) \to (\overline{P}(x) \,\vee\, \overline{\overline{Q}(x) \to P(x)}))$ праўдзівае; дакажыце, што выказванне $\forall x \,\, P(x)$ непраўдзівае;
+    \item $\forall x \,\, ((\overline{Q}(x) \,\&\, P(x)) \to (P(x) \to Q(x))$ непраўдзівае; дакажыце, што выказванне $\exists x \,\, P(x)$ праўдзівае, а выказванне $\forall x \,\, Q(x)$ непраўдзівае;
+    \item $\exists x \,\, (P(x) \,\&\, (P(x) \thicksim (Q(x) \vee \overline{P}(x))))$ праўдзівае; дакажыце, што выказванне \\ $\exists x \,\, (P(x) \,\&\, Q(x))$ таксама будзе праўдзівым;
+    \item $\forall x \,\, (\overline{P}(x) \to (P(x) \,\vee\, \overline{\overline{Q}(x) \to P(x)}))$ непраўдзівае; дакажыце, што выказванне $\forall x \,\, P(x)$ непраўдзівае, а выказванне $\exists x \,\, Q(x)$ праўдзівае.
+\end{belarusianEnumerate}
+}
+{%
+Пусть $P(x)$ и $Q(x)$ "--- такие одноместные предикаты, заданные над
+одним и тем же множеством $M$, что высказывание
+\begin{russianEnumerate}
+    \item $\exists x \,\, (P(x) \to (\overline{P}(x) \,\vee\, \overline{\overline{Q}(x) \to P(x)}))$ истинно; докажите, что высказывание $\forall x \,\, P(x)$ ложно;
+    \item $\forall x \,\, ((\overline{Q}(x) \,\&\, P(x)) \to (P(x) \to Q(x))$ ложно; докажите, что высказывание $\exists x \,\, P(x)$ истинно, а высказывание $\forall x \,\, Q(x)$ ложно;
+    \item $\exists x \,\, (P(x) \,\&\, (P(x) \thicksim (Q(x) \vee \overline{P}(x))))$ истинно; докажите, что высказывание \\ $\exists x \,\, (P(x) \,\&\, Q(x))$ также будет истинным;
+    \item $\forall x \,\, (\overline{P}(x) \to (P(x) \,\vee\, \overline{\overline{Q}(x) \to P(x)}))$ ложно; докажите, что высказывание $\forall x \,\, P(x)$ ложно, а высказывание $\exists x \,\, Q(x)$ истинно.
+\end{russianEnumerate}
+}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Надайце наступным формулам указаныя інтэрпрэтацыі і вызначыце праўдзівыя значэнні атрыманых выказванняў:}
+{Придайте следующим формулам указанные интерпретации и определите
+истинностные значения получающихся высказываний:}
+{%
+\begin{belarusianEnumerate}
+    \item $(\forall x \,\, \overline{P(x, x)}) \,\&\, (\forall x \, \forall y \, \forall z \,\, ((P(x, y) \,\&\, P(y, z)) \to P(x, z))) \,\&\, (\forall x \, \exists y \,\, P(x, y))$, \\ $M = \{1, 2, \ldots, n\}$, $P(x, y) = \text{<<}x < y\text{>>}$;
+    \item папярэдняя формула, $M = \mathbbmss{N}$, $P(x, y) = \text{<<}x < y\text{>>}$;
+    \item $(\exists x \,\, P(x)) \to P(y)$, $M=\{2, 3\}$, $P(x) = \text{<<}2 \,\,\text{дзеліць}\,\, x\text{>>}$, $y = 3$;
+    \item $(\forall x \,\, P(x)) \thicksim (\forall x \,\, Q(x))$, $M = \mathbbmss{N}$, $P(x) = \text{<<}3 \,\,\text{дзеліць}\,\, x\text{>>}$, $Q(x) = \text{<<}2
+    \,\,\text{дзеліць}\,\, x\text{>>}$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Вызначыце, якія з наступных формул здзяйсняльныя, а якія не (то-бок з'яўляюцца тоесна непраўдзівымі):}
+{Определите, какие из следующих формул выполнимы, а какие нет (т.~е. являются тождественно ложными):}
+{%
+\begin{belarusianEnumerate}
+    \item $\exists x \, \forall y \,\, (Q(x, y) \to (\forall z \,\, R(x, y, z)))$;
+    \item $\exists x \, \forall y \,\, (Q(x, x) \,\&\, \overline{Q(x, y)})$;
+    \item $(\forall x \, (P(x) \vee Q(x))) \to ((\forall x \, P(x)) \vee (\forall x \, (Q(x))))$;
+    \item $\forall x \, (P(x) \,\&\, \overline{P(x)})$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Дакажыце, што наступныя формулы з'яўляюцца таўталогіямі логікі прэдыкатаў:}
+{Докажите, что следующие формулы являются тавтологиями логики предикатов:}
+{%
+\begin{belarusianEnumerate}
+    \item $(\forall x \,\, (P(x) \,\&\, Q(x))) \thicksim ((\forall x \,\, P(x)) \,\&\, (\forall x \,\, Q(x)))$;
+    \item $(\exists x \,\, P(x, x)) \to (\exists x \, \exists y \,\, P(x, y))$;
+    \item $(\forall x \,\, (P(x) \to Q)) \thicksim ((\exists x \,\, P(x)) \to Q)$;
+    \item $\exists x \,\, (P(y) \to P(x))$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Дакажыце, што справядлівыя наступныя раўназначнасці:}
+{Докажите, что справедливы следующие равносильности:}
+{%
+\begin{belarusianEnumerate}
+    \item $\forall x \,\, (P(x) \,\&\, Q(x)) \equiv (\forall x \,\, P(x)) \,\&\, (\forall x \,\, Q(x))$;
+    \item $\overline{\exists x \,\, P(x)} \equiv \forall x \,\, \overline{P(x)}$;
+    \item $\exists x \,\, (P(x) \,\vee\, Q(x)) \equiv (\exists x \,\, P(x)) \,\vee\, (\exists x \,\, Q(x))$;
+    \item $\overline{\forall x \,\, P(x)} \equiv \exists x \,\, \overline{P(x)}$.
+\end{belarusianEnumerate}
+}
+
+\end{problemList}
+
+\end{document}

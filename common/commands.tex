@@ -58,6 +58,10 @@
   {\begin{enumerate}[label=\belarusianLetters*, topsep=-7pt]}
   {\end{enumerate} \textbf{}\vspace{-8pt}}
 
+\newenvironment{belarusianEnumerateMulticol}
+  {\begin{multicols}{2}\begin{enumerate}[label=\belarusianLetters*]}
+  {\end{enumerate}\end{multicols} \textbf{}\vspace{-20pt}}
+
 \AddEnumerateCounter{\asbuk}{\@asbuk}{\cyrm}
 \newenvironment{russianEnumerate}
   {\begin{enumerate}[label=(\asbuk*), topsep=-4pt, itemsep=-1ex]}

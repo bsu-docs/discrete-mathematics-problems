@@ -2,67 +2,70 @@
 \renewcommand\ge{\geqslant}
 
 \newcommand{\ruText}[1]{
-  {\footnotesize \textcolor{darkgray}{#1} \par}
+    {\footnotesize \textcolor{darkgray}{#1} \par}
 }
 
 \newcommand{\biLangHeader}[2]{
-  \subsection*{%
-  	#1 \\%
-  	\ruText{#2}%
-  }%
+    \subsection*{%
+        #1 \\%
+        \ruText{#2}%
+    }%
 }
 
 \newcommand{\quizTitle}[3]{%
 \begin{center}
-	\textbf{Кантрольная работа па тэме <<#1>> (варыянт #3)} \\
-	\ruText{Контрольная работа по теме <<#2>> (вариант #3)}
+    \textbf{Кантрольная работа па тэме <<#1>> (варыянт #3)} \\
+    \ruText{Контрольная работа по теме <<#2>> (вариант #3)}
 \end{center}
 }
 
-\newcommand{\problemItemSimple}[2]{%
-	\item #1 \\%
-	\ruText{#2}%
+\newcommand{\problemItemSimple}[3][]{%
+    \ifthenelse{\equal{#1}{*}}{\addtocounter{enumi}{1}}{}%
+    \ifthenelse{\equal{#1}{*}}{\item[\theenumi*.] #2 \\}{\item #2 \\}%
+    \ruText{#3}%
 }
 
-\newcommand{\problemItemWithCommonPart}[3]{%
-	\item #1 \\%
-	\ruText{#2}%
-	#3%
+\newcommand{\problemItemWithCommonPart}[4][]{%
+    \ifthenelse{\equal{#1}{*}}{\addtocounter{enumi}{1}}{}%
+    \ifthenelse{\equal{#1}{*}}{\item[\theenumi*.] #2 \\}{\item #2 \\}%
+    \ruText{#3}%
+    #4%
 }
 
-\newcommand{\problemItemWithCommonPartComplicated}[5]{%
-	\item #1 \\%
-	\ruText{#2}%
-	#3 \\
-	#4 \\%
-	\ruText{#5}%
+\newcommand{\problemItemWithCommonPartComplicated}[6][]{%
+    \ifthenelse{\equal{#1}{*}}{\addtocounter{enumi}{1}}{}%
+    \ifthenelse{\equal{#1}{*}}{\item[\theenumi*.] #2 \\}{\item #2 \\}%
+    \ruText{#3}%
+    #4 \\
+    #5 \\%
+    \ruText{#6}%
 }
 
 \makeatletter
 \def\belarusianLetters#1{
-  \expandafter\@belarusianLetters\csname c@#1\endcsname
+    \expandafter\@belarusianLetters\csname c@#1\endcsname
 }
 \def\@belarusianLetters#1{
-  (%
-  \ifcase#1\or а\or б\or в\or г\or д\or е\or ж\or з\or і\or к\or л\or м\fi%
-  )
+    (%
+    \ifcase#1\or а\or б\or в\or г\or д\or е\or ж\or з\or і\or к\or л\or м\fi%
+    )
 }
 \makeatother
 \AddEnumerateCounter{\belarusianLetters}{\@belarusianLetters}{Ы}
 
 \newenvironment{problemList}
-  {\begin{enumerate}[leftmargin=*,topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]}
-  {\end{enumerate}}
+    {\begin{enumerate}[leftmargin=*,topsep=0pt,itemsep=-1ex,partopsep=1ex,parsep=1ex]}
+    {\end{enumerate}}
 
 \newenvironment{belarusianEnumerate}
-  {\begin{enumerate}[label=\belarusianLetters*, topsep=-7pt]}
-  {\end{enumerate} \textbf{}\vspace{-8pt}}
+    {\begin{enumerate}[label=\belarusianLetters*, topsep=-7pt]}
+    {\end{enumerate} \textbf{}\vspace{-8pt}}
 
 \newenvironment{belarusianEnumerateMulticol}
-  {\begin{multicols}{2}\begin{enumerate}[label=\belarusianLetters*]}
-  {\end{enumerate}\end{multicols} \textbf{}\vspace{-20pt}}
+    {\begin{multicols}{2}\begin{enumerate}[label=\belarusianLetters*]}
+    {\end{enumerate}\end{multicols} \textbf{}\vspace{-20pt}}
 
 \AddEnumerateCounter{\asbuk}{\@asbuk}{\cyrm}
 \newenvironment{russianEnumerate}
-  {\begin{enumerate}[label=(\asbuk*), topsep=-4pt, itemsep=-1ex]}
-  {\end{enumerate} \textbf{}\vspace{-11pt}}
+    {\begin{enumerate}[label=(\asbuk*), topsep=-4pt, itemsep=-1ex]}
+    {\end{enumerate} \textbf{}\vspace{-11pt}}

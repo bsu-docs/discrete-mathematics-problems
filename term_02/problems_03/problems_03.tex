@@ -1,0 +1,223 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\usepackage{multicol}
+\subimport{../../common/}{preamble}
+
+\begin{document}
+
+\biLangHeader
+{3. Замкнёнасць і паўната. Асноўныя класы замкнёных функцый.}
+{Замкнутость и полнота. Основные классы замкнутых функций.}
+
+\begin{problemList}
+
+\problemItemWithCommonPart
+{Высветліць, ці з'яўляецца функцыя $f$ самадваістай:}
+{Выяснить, является ли функция $f$ самодвойственной:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $f=x_1\vee x_2$;
+    \item $f=x_1x_2\vee x_2x_3\vee x_3x_1$;
+    \item $f=x_1\oplus x_2\oplus x_3\oplus 1$;
+    \item $f=(x\vee \overline{y}\vee z)t\vee x\overline{y}z$.
+\end{belarusianEnumerateMulticol} 
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Высветліць, ці з'яўляецца самадваістай функцыя $f$, зададзеная вектарна:}
+{Выяснить, является ли самодвойственной функция $f$, заданная векторно:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $\underline{w}(f)=(1010)$;
+    \item $\underline{w}(f)=(1001)$;
+    \item $\underline{w}(f)=(10110100)$;
+    \item $\underline{w}(f)=(10110010)$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Вызначыць, якія са зменных функцый $f(\tilde x^n)$ трэба замяніць на $x$, 
+а якія на $\overline{x}$ з тым, каб атрымаць канстанту:}
+{Определить, какие из переменных функций $f(\tilde x^n)$ следует заменить на $x$,
+а какие на $\overline{x}$ с тем, чтобы получить константу:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $\underline{w}(f)=(01101101)$;
+    \item $\underline{w}(f)=(10110110)$;
+    \item $\underline{w}(f)=(11011000)$;
+    \item $\underline{w}(f)=(10100100)$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Уявіўшы функцыю $f$ паліномам Жэгалкіна, высветліць, ці з'яўляецца яна лінейнай:}
+{Представив функцию $f$ полиномом Жегалкина, выяснить, является ли она линейной:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $f=x\rightarrow y$;
+    \item $f=\overline{x\rightarrow y}\oplus\overline{x}y$;
+    \item $f=x\overline{y}(x\sim y)$;
+    \item $f=xy\vee\overline{x}\overline{y}\vee z$.
+\end{belarusianEnumerateMulticol}
+}
+
+\problemItemWithCommonPart
+{Высветліць, ці з'яўляецца лінейнай функцыя $f$, зададзеная вектарна:}
+{Выяснить, является ли линейной функция $f$, заданная векторно:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $\underline{w}(f)=(1001)$;
+    \item $\underline{w}(f)=(1101)$;
+    \item $\underline{w}(f)=(10010110)$;
+    \item $\underline{w}(f)=(1001011010010110)$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Падставіўшы на месцы зменных нелінейнай функцыі $f$ функцыі з мноства $\{0, 1, x, y\}$,
+атрымаць хаця б адну з функцый $xy$, $x\overline{y}$, $\overline{xy}$:}
+{Подставляя на места переменных нелинейной функции $f$ функции из множества $\{0, 1, x, y\}$,
+получить хотя бы одну из функций $xy$, $x\overline{y}$, $\overline{xy}$:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $\underline{w}(f)=(01100111)$;
+    \item $\underline{w}(f)=(11010101)$;
+    \item $f=x_1x_2\vee x_2\overline{x}_3\vee \overline{x}_3x_1$;
+    \item $f=(x_1\vee x_2\vee x_3)(\overline{x}_1\vee \overline{x}_2\vee \overline{x}_3\vee x_4)$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Высветліць, ці належыць функцыя $f$ мноству $T_1\setminus T_0$:}
+{Выяснить, принадлежит ли функция $f$ множеству $T_1\setminus T_0$:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $\underline{w}(f)=(10010110)$;
+    \item $\underline{w}(f)=(11011001)$;
+    \item $f=(x_1\rightarrow x_2)(x_2\rightarrow x_3)(x_3 \rightarrow x_1)$;
+    \item $f=x_1\rightarrow (x_2 \rightarrow (x_3 \rightarrow x_1))$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Падлічыць колькасць функцый, якія залежаць ад зменных $x_1, x_2, \ldots, x_n$ і належаць мноству~$A$:}
+{Подсчитать число функций, зависящих от переменных $x_1, x_2, \ldots, x_n$ и принадлежащих множеству~$A$:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $A=(L\setminus T_0)\cap S$;
+    \item $A=T_0\cap L$;
+    \item $A=(S\cap L)\setminus T_1$;
+    \item $A=S\setminus(T_0\cup T_1)$;
+    \item $A=(L\setminus S)\cap T_1$;
+    \item $A=T_0 \cup T_1 \cup S$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Па вектары значэння $\tilde\alpha_f$ высветліць, ці з'яўляецца функцыя $f$ манатоннай:}
+{По вектору значений $\tilde\alpha_f$ выяснить, является ли функция $f$ монотонной:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $\underline{w}(f)=(0110)$;
+    \item $\underline{w}(f)=(10011111)$;
+    \item $\underline{w}(f)=(00110111)$;
+    \item $\underline{w}(f)=(01010111)$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Праверыць ці з'яўляецца функцыя $f$ манатоннай:}
+{Проверить, является ли функция $f$ монотонной:}
+{%
+\begin{belarusianEnumerate}
+    \item $f=x\vee \overline{x}y\vee\overline{x}z\overline{y}$;
+    \item $f=(x_1\oplus x_2)\cdot(x_1\sim x_2)$;
+    \item $f=x_1\rightarrow (x_2 \rightarrow x_1)$;
+    \item $f=x_1\overline{x}_2\overline{x}_3\vee x_1\overline{x}_2x_3\vee x_1x_2\overline{x}_3\vee x_1x_2x_3\vee \overline{x}_1x_2x_3$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Для неманатоннай функцыі $f$ указаць два суседнія наборы $\tilde\alpha$ і $\tilde\beta$ значэнняў зменных,
+такіх, што $\tilde\alpha < \tilde\beta$ і $f(\tilde\alpha) > f(\tilde\beta)$:}
+{Для немонотонной функции $f$ указать два соседних набора $\tilde\alpha$ и $\tilde\beta$ значений переменных,
+таких, что $\tilde\alpha < \tilde\beta$ и $f(\tilde\alpha) > f(\tilde\beta)$:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $f=x_1x_2x_3\vee \overline{x}_1x_2$;
+    \item $f=x_1\oplus x_2\oplus x_3$;
+    \item $f=x_1x_2\oplus x_3$;
+    \item $f=x_1\vee x_2\overline{x}_3$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Падлічыць колькасць булевых функцый ад $n$ зменных у кожным з наступных мностваў:}
+{Подсчитать число булевых функций от $n$ переменных в каждом из следующих множеств:}
+{%
+\begin{belarusianEnumerateMulticol}
+    \item $M\setminus(T_1 \cup T_0)$;
+    \item $M \cap L$.
+\end{belarusianEnumerateMulticol}
+}
+
+\smallskip
+
+\problemItemSimple[*]
+{Ці справядліва, што колькасць самадваістых функцый, якія істотна залежаць ад зменных $x_1, \ldots, x_n$,
+роўная колькасці функцый з $P_2^{n-1}$, якія істотна залежаць ад усіх сваіх зменных?}
+{Верно ли, что число самодвойственных функций, существенно зависящих от переменных $x_1, \ldots, x_n$,
+равно числу функций из $P_2^{n-1}$, существенно зависящих от всех своих переменных?}
+
+\bigskip
+
+\problemItemSimple[*]
+{Даказаць, што лінейная функцыя з'яўляецца самадваістай тады і толькі тады,
+калі яна істотна залежыць ад няцотнай колькасці зменных.}
+{Доказать, что линейная функция является самодвойственной тогда и только тогда,
+когда она существенно зависит от нечётного числа переменных.}
+
+\bigskip
+
+\problemItemSimple[*]
+{Знайсці колькасць лінейных функцый $f(\tilde x^n)$, якія істотна залежаць роўна ад $k$ зменных.}
+{Найти число линейных функций $f(\tilde x^n)$, существенно зависящих в точности от $k$ переменных.}
+
+\bigskip
+
+\problemItemSimple[*]
+{Паказать, што $M$ не змяшчаецца ні ў адным з класаў $T_0$, $T_1$, $S$, $L$,
+указаўшы манатонныя функцыі, якія не змяшчаюцца ў адпаведных класах.}
+{Показать, что $M$ не содержится ни в одном из классов $T_0$, $T_1$, $S$, $L$,
+указав монотонные функции, не содержащиеся в соответствующих классах.}
+
+\bigskip
+
+\problemItemSimple[*]
+{Падлічыць колькасць шэферных функцый у $P_2^n$.}
+{Подсчитать число шефферовых функций в $P_2^n$.}
+
+\end{problemList}
+
+\end{document}

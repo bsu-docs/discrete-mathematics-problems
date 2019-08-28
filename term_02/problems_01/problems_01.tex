@@ -1,0 +1,141 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+
+\begin{document}
+
+\biLangHeader
+{1. Асноўныя звесткі пра булевыя зменныя. Спрашчэнні формул. Істотныя і фіктыўныя зменныя.}
+{Основные сведения о булевых функциях. Упрощения формул. Существенные и фиктивные переменные.}
+
+\begin{problemList}
+
+\problemItemSimple
+{%
+Знайдзіце колькасць функцый у $P^2_n$ (то-бок функцый, якія залежаць ад зменных $x_1, x_2, \ldots, x_n$), для якіх выконваецца ўмова:
+\begin{belarusianEnumerate}
+    \item на дадзеных $l$ наборах значэнні фіксаваныя, а на астатніх "--- адвольныя ($0 \le l \le 2^n - 1$, $n \ge 1$);
+    \item функцыя роўная нулю не менш чым на палове набораў ($n \ge 1$);
+    \item функцыя $f(\tilde x^n)$ супадае з функцыяй, якая атрымліваецца з яе пры перастаноўцы зменных $x_1$ і $x_2$ ($n \ge 2$);
+    \item функцыя $f(\tilde x^n)$ \textit{сіметрычная}, то-бок $f(x_1, x_2, \ldots, x_n) = f(x_{i_1}, x_{i_2}, \ldots, x_{i_n})$ пры любой перастаноўцы $(i_1, i_2, \ldots, i_n)$, $n \ge 1$.
+\end{belarusianEnumerate}
+}
+{%
+Найдите число функций в $P^2_n$ (т.е. функций, зависящих от переменных $x_1, x_2, \ldots, x_n$), удовлетворяющих условию:
+\begin{russianEnumerate}
+    \item на данных $l$ наборах значения фиксированы, а на остальных "--- произвольные ($0 \le l \le 2^n - 1$, $n \ge 1$);
+    \item функция равна 0 не менее чем на половине наборов ($n \ge 1$);
+    \item функция $f(\tilde x^n)$ совпадает с функцией, получаемой из неё при перестановке переменных $x_1$ и $x_2$ ($n \ge 2$);
+    \item функция $f(\tilde x^n)$ \textit{симметрическая}, т.е. $f(x_1, x_2, \ldots, x_n) = f(x_{i_1}, x_{i_2}, \ldots, x_{i_n})$ при любой перестановке $(i_1, i_2, \ldots, i_n)$, $n \ge 1$.
+\end{russianEnumerate}
+}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Пабудаваўшы табліцы адпаведных функцый, высветліце, ці эквівалентныя формулы $A$ і  $B$:}
+{Построив таблицы соответствующих функций, выясните, эквивалентны ли формулы $A$ и $B$:}
+{%
+\begin{belarusianEnumerate}
+    \item $A=((x\downarrow y)\rightarrow ((y\oplus (x \vee z))|z))$, $B=((x\vee \overline{y})\sim (x\rightarrow (y \oplus (x\cdot z))))$;
+    \item $A=(x\rightarrow y)\oplus((y\rightarrow \overline{z})\rightarrow x\cdot y)$, $B=\overline{y\cdot z\rightarrow x}$;
+    \item $A=(x|\overline{y})\rightarrow((y\downarrow \overline{z})\rightarrow(x\oplus z))$, $B=x\cdot(y\cdot z)\oplus(\overline{x} \rightarrow z)$;
+    \item $A=(x\downarrow y)$, $B=((x|x)|(y|y))|((x|x)|(y|y))$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Карыстаючыся асноўнымі эквівалентнасцямі, высветліце, ці эквівалентныя формулы $A$ і $B$:}
+{Используя основные эквивалентности, установите эквивалентность формул $A$ и $B$:}
+{%
+\begin{belarusianEnumerate}
+    \item $A=(x\downarrow \overline{y})\rightarrow (\overline{x}z\rightarrow ((\overline{x}|(y\sim z))\vee(\overline{x\cdot y}\oplus z)))$, $B=((x\rightarrow y)|(x\downarrow (y\overline{z})))\vee \overline{y\cdot z}$;
+    \item $A=(\overline{x}\rightarrow y)\rightarrow (\overline{x}\cdot y\sim(x\oplus y))$, $B=(\overline{x\cdot y}\rightarrow x)\rightarrow y$;
+    \item $A=(x\cdot y\vee(\overline{x}\rightarrow y\cdot z))\sim((\overline{x}\rightarrow\overline{y})\rightarrow z)$, $B=(x\rightarrow y)\oplus(y\oplus z)$;
+    \item $A=(x\oplus y\cdot z)\rightarrow(\overline{x}\rightarrow(y\rightarrow z))$, $B=x\rightarrow((y\rightarrow z)\rightarrow x)$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Назавіце ўсе фіктыўныя зменныя функцыі $f$:}
+{Укажите все фиктивные переменные функции $f$:}
+{%
+\begin{belarusianEnumerate}
+    \item $\underline{w}(f)=(10101010)$;
+    \item $\underline{w}(f)=(1011010110110101)$;
+    \item $f(\tilde x^2)=((x_1\vee x_2)\rightarrow x_1\cdot x_2)\oplus(x_1\rightarrow x_2)\cdot (x_2 \rightarrow x_1)$;
+    \item $f(\tilde x^3)=((x_1 \rightarrow \overline{x_2})\oplus (x_2\rightarrow \overline{x_3}))\oplus(x_2 \rightarrow x_3)$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Пакажыце, што $x_1$ "--- фіктыўная зменная функцыі $f$
+(для гэтага рэалізуйце функцыю $f$ формулай, якая не змяшчае зменную $x_1$ яўна):}
+{Покажите, что $x_1$ "--- фиктивная переменная функции $f$
+(реализовав для этой цели функцию $f$ формулой, не содержащей явно переменную $x_1$):}
+{%
+\begin{belarusianEnumerate}
+    \item $f(\tilde x^2)=(x_2 \rightarrow x_1)\cdot (x_2\downarrow x_2)$;
+    \item $f(\tilde x^2)=(x_1\sim x_2)\vee(x_1 | x_2)$;
+    \item $f(\tilde x^3)=((x_1 \oplus x_2)\rightarrow x_3)\cdot \overline{x_3\rightarrow x_2}$;
+    \item $f(\tilde x^4)=(x_1 \rightarrow ((x_2 \rightarrow x_3)\rightarrow x_4))\sim \overline{x_1}\cdot (x_2 \rightarrow x_3)\cdot \overline{x_4}$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Дакажыце, што}
+{Докажите, что \\[-30pt]}
+{\[ a_1\vee a_2\vee \ldots \vee a_k = a_1\oplus a_2\ldots \oplus a_k \Leftrightarrow a_i\cdot a_j=0\ \forall 1 \le i \neq j \le k \]}
+
+\medskip
+
+\problemItemSimple[*]
+{Знайдзіце колькасць функцый у $P_n^2$, якія адпавядаюць умове: існуе пара супрацьлеглых набораў,
+на якіх функцыя $f$ прымае значэнне 1 (для розных функцый $f$ такія пары набораў могуць не супадаць).}
+{Найдите число функций в $P_n^2$, удовлетворяющих условию: существует пара противоположных наборов,
+на которых функция $f$ обращается в 1 (для разных функций $f$ такие пары наборов могут не совпадать).}
+
+\bigskip
+
+\problemItemWithCommonPart[*]
+{Высветліце, пры якіх $n$ ($n\ge 2)$ функцыя $f(\tilde x^n)$ істотна залежыць ад усіх сваіх зменных:}
+{Выясните, при каких $n$ ($n\ge 2)$ функция $f(\tilde x^n)$ зависит существенно от всех своих переменных:}
+{%
+\begin{belarusianEnumerate}
+    \item $f(\tilde x^n)=(x_1\vee x_2\vee\ldots\vee x_n)\rightarrow((x_1\vee x_2)\cdot (x_2\vee x_3)\cdot\ldots\cdot(x_{n-1}\vee x_n)\cdot(x_n\vee x_1))$;
+    \item $f(\tilde x^n)=(x_1|x_2)\oplus(x_2|x_3)\oplus \ldots \oplus (x_{n-1}|x_n)\oplus(x_n|x_1)$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemSimple[*]
+{%
+Праз $P^c_n\ (n \ge 1)$ абазначым мноства ўсіх булевых функцый, якія залежаць ад зменных $x_1, x_2, \ldots, x_n$ і пры гэтым ад кожнай зменнай істотным чынам.
+\begin{belarusianEnumerate}
+    \item Выпішыце ўсе функцыі мноства $P^c_2$;
+    \item Знайдзіце колькасць элементаў мноства $P^c_3$;
+    \item Дакажыце, што $|P^c_n|=\sum\limits_{k=0}^n (-1)^kC_n^k2^{2^{n-k}}$.
+\end{belarusianEnumerate}\\
+}
+{%
+Через $P^c_n\ (n \ge 1)$ обозначим множество всех булевых функций, зависящих от переменных $x_1, x_2, \ldots, x_n$ и при этом от каждой из них существенным образом.
+\begin{russianEnumerate}
+    \item Выпишите все функции множества $P^c_2$;
+    \item Найдите число элементов множества $P^c_3$;
+    \item Докажите, что $|P^c_n|=\sum\limits_{k=0}^n (-1)^kC_n^k2^{2^{n-k}}$.
+\end{russianEnumerate}
+}
+
+\end{problemList}
+
+\end{document}

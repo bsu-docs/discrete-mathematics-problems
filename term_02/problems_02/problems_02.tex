@@ -1,0 +1,152 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+
+\begin{document}
+
+\biLangHeader
+{2. Асноўныя прадстаўленні булевых функцый: ДНФ, КНФ, КДНФ, ККНФ, паліном Жэгалкіна.}
+{Основные представления булевых функций: ДНФ, КНФ, СДНФ, СКНФ, полином Жегалкина.}
+
+\begin{problemList}
+
+\problemItemWithCommonPart
+{З дапамогай эквівалентных пераўтварэнняў пабудуйце ДНФ функцыі $f(\tilde x^n)$:}
+{С помощью эквивалентных преобразований постройте ДНФ функции $f(\tilde x^n)$:}
+{%
+\begin{belarusianEnumerate}
+    \item $f(\tilde x^3)=(\overline{x}_1 \vee \overline{x}_2 \vee \overline{x}_3)\cdot (x_1x_2\vee x_3)$;
+    \item $f(\tilde x^3)=(\overline{x}_1x_2\oplus x_3)\cdot(x_1x_3\rightarrow x_2)$;
+    \item $f(\tilde x^4)=((x_1\rightarrow x_2\overline{x}_3)\cdot (x_2\oplus x_3x_4)\rightarrow\overline{x}_1x_2x_4)\vee \overline{\overline{x}_1x_2}$;
+    \item $f(\tilde x^4)=(x_1\vee x_2\overline{x}_3\overline{x}_4)\cdot ((\overline{x}_1\vee x_4)\oplus x_2x_3)\vee \overline{x}_2\cdot(x_3 \vee \overline{x_1\overline{x}_4})$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{З дапамогай эквівалентных пераўтварэнняў пабудуйце КНФ функцыі $f(\tilde x^n)$:}
+{Используя эквивалентные преобразования, постройте КНФ функции $f(\tilde x^n)$:}
+{%
+\begin{belarusianEnumerate}
+    \item $f(\tilde x^2)=((x_1\rightarrow x_2)\oplus (\overline{x}_1|x_2))\cdot(x_1\sim x_2\cdot (x_1\rightarrow x_2))$;
+    \item $f(\tilde x^3)=x_1\overline{x}_2\vee\overline{x}_2x_3\vee(x_1\rightarrow x_2x_3)$;
+    \item $f(\tilde x^3)=(\overline{x}_1\rightarrow (x_2\rightarrow x_3))\oplus x_1\overline{x}_2x_3$;
+    \item $f(\tilde x^4) = \overline{x}_1x_2\vee \overline{x}_2x_3\vee \overline{x}_3x_4\vee x_1\overline{x}_4$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Прадстаўце ў канчатковай ДНФ наступныя функцыі:}
+{Представьте в совершенной ДНФ следующие функции:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $\underline{w}(f) = (01101001)$;
+    \item $f(\tilde x^3) = (x_1 \vee x_2) \rightarrow x_3$;
+    \item $\underline{w}(f) = (01010001)$;
+    \item $f(\tilde x^4) = (x_1 \rightarrow x_2x_3x_4)\cdot (x_3 \rightarrow x_1\overline{x_2})$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Прадстаўце ў выглядзе канчатковай КНФ наступныя функцыі:}
+{Представьте в виде совершенной КНФ следующие функции:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $\underline{w}(f)=(01101001)$;
+    \item $f(\tilde x^2)=x_1\oplus x_2$;
+    \item $\underline{w}(f)=(01011101)$;
+    \item $f(\tilde x^3)=x_1\overline{x}_2\vee x_1x_3\vee \overline{x}_2x_3$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Метадам нявызначаных каэфіцыентаў знайдзіце паліномы Жэгалкіна для наступных функцый:}
+{Методом неопределённых коэффициентов найдите полиномы Жегалкина для следующих функций:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $\underline{w}(f)=(0100)$;
+    \item $f(\tilde x^2)=x_1 | x_2$;
+    \item $\underline{w}(f)=(01101001)$;
+    \item $f(\tilde x^3)=x_1(x_2 \vee \overline{x}_3)$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Пераўтварыце вектар значэнняў функцыі $f(\tilde x^n)$ і пабудуйце паліном Жэгалкіна для гэтай функцыі, калі:}
+{Преобразуя вектор значений функции $f(\tilde x^n)$, постройте полином Жегалкина для этой функции, если:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $\underline{w}(f)=(1000)$;
+    \item $\underline{w}(f)=(00010111)$;
+    \item $\underline{w}(f)=(01101110)$;
+    \item $\underline{w}(f)=(0000010001100111)$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Прадстаўце функцыю $f(\tilde x^n)$ формулай над мноствам звязак $\{\&, -\}$,
+пераўтварыце атрыманую формулу ў паліном Жэгалкіна функцыі $f(\tilde x^n)$
+(выкарыстоўваючы эквівалентнасці $\overline{A}=A\oplus 1$, $A\cdot (B \oplus C)=A\cdot B\oplus A\cdot C$,
+$A\cdot A=A$, $A\cdot 1 = A$, $A\oplus A=0$ і $A\oplus 0=A$):}
+{Представьте функцию $f(\tilde x^n)$ формулой над множеством связок $\{\&, -\}$,
+преобразуйте полученную формулу в полином Жегалкина функции $f(\tilde x^n)$
+(используя эквивалентности $\overline{A}=A\oplus 1$, $A\cdot (B \oplus C)=A\cdot B\oplus A\cdot C$,
+$A\cdot A=A$, $A\cdot 1 = A$, $A\oplus A=0$ и $A\oplus 0=A$):}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $f(\tilde x^2)=x_1 \rightarrow x_2$;
+    \item $f(\tilde x^2)=x_1 \rightarrow (x_2\rightarrow \overline{x}_1 x_2)$; 
+    \item $f(\tilde x^3)=(x_1 \downarrow x_2)|(x_2 \downarrow x_3)$; 
+    \item $f(\tilde x^3)=(x_1 \vee x_2)\cdot(x_2 | x_3)$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemSimple[*]
+{Падлічыце колькасць функцый $f(\tilde x^n)$, у якіх канчатковая ДНФ адпавядае наступнай умове:
+адсутнічаюць элементарныя кан'юнкцыі, у якіх колькасць літар з адмаўленнямі роўная колькасці літар без адмаўленняў.}
+{Подсчитайте число функций $f(\tilde x^n)$, у которых совершенная ДНФ удовлетворяет следующему условию:
+отсутствуют элементарные конъюнкции, у которых число букв с отрицаниями равно числу букв без отрицаний.}
+
+\bigskip
+
+\problemItemSimple[*]
+{Знайдзіце даўжыню канчатковай ДНФ функцыі $f(\tilde x^n)=(((x_1|x_2)|x_3)|\ldots |x_{n-1})|x_n$, $n\ge 2$.}
+{Найдите длину совершенной ДНФ функции $f(\tilde x^n)=(((x_1|x_2)|x_3)|\ldots |x_{n-1})|x_n$, $n\ge 2$.}
+
+\bigskip
+
+\problemItemSimple[*]
+{Няхай мноствы $X^m=\{x_1, \ldots, x_m\}$ і $Y^n=\{y_1, \ldots, y_n\}$ не перакрыжоўваюцца, і даўжыні канчатковых ДНФ функцый $f(\tilde x^m)$ і $g(\tilde y^n)$ роўныя адпаведна $k$ і $l$. Знайдзіце даўжыні канчатковай ДНФ функцый $f(\tilde x^m)\vee g(\tilde y^n)$, $f(\tilde x^m)\oplus g(\tilde y^n)$.}
+{Пусть множества $X^m=\{x_1, \ldots, x_m\}$ и $Y^n=\{y_1, \ldots, y_n\}$ не пересекаются. Предполагая, что длины совершенных ДНФ функций $f(\tilde x^m)$ и $g(\tilde y^n)$ равны соответственно $k$ и $l$, найдите длины совершенной ДНФ функций $f(\tilde x^m)\vee g(\tilde y^n)$, $f(\tilde x^m)\oplus g(\tilde y^n)$.}
+
+\medskip
+
+\problemItemSimple[*]
+{Высветліце, на якой колькасці набораў з $B^n$ абарачваецца ў 1 паліном $P(\tilde x^n)=\bigoplus\limits_{i=2}^n x_1x_i$, $n \ge 2$.}
+{Выясните, на скольких наборах из $B^n$ обращается в 1 полином $P(\tilde x^n)=\bigoplus\limits_{i=2}^n x_1x_i$, $n \ge 2$.}
+
+\medskip
+
+\problemItemSimple[*]
+{Знайдзіце функцыю $f(\tilde x^n)$, у якой даўжыня палінома Жэгалкіна ў $2^n$ разоў перавышае даўжыню ягонай канчатковай ДНФ ($n \ge 1$).}
+{Найдите функцию $f(\tilde x^n)$, у которой длина полинома Жегалкина в $2^n$ раз превосходит длину её совершенной ДНФ ($n \ge 1$).}
+
+\bigskip
+
+\end{problemList}
+
+\end{document}

@@ -1,5 +1,6 @@
 \renewcommand\le{\leqslant}
 \renewcommand\ge{\geqslant}
+\renewcommand\epsilon{\varepsilon}
 
 \newcommand{\ruText}[1]{
     {\footnotesize \textcolor{darkgray}{#1} \par}
@@ -36,7 +37,7 @@
     \ifthenelse{\equal{#1}{*}}{\addtocounter{enumi}{1}}{}%
     \ifthenelse{\equal{#1}{*}}{\item[\theenumi*.] #2 \\}{\item #2 \\}%
     \ruText{#3}%
-    #4 \\
+    #4 \textbf{}\\
     #5 \\%
     \ruText{#6}%
 }
@@ -61,7 +62,7 @@
     {\begin{enumerate}[label=\belarusianLetters*, topsep=-7pt]}
     {\end{enumerate} \textbf{}\vspace{-8pt}}
 
-\newenvironment{belarusianEnumerateMulticol}
+\newenvironment{belarusianEnumerateTwocol}
     {\begin{multicols}{2}\begin{enumerate}[label=\belarusianLetters*]}
     {\end{enumerate}\end{multicols} \textbf{}\vspace{-20pt}}
 

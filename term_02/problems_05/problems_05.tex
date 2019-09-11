@@ -1,0 +1,209 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\biLangHeader
+{5. Азбука тэорыі графаў.}
+{Азбука теории графов.}
+
+\begin{problemList}
+
+\problemItemSimple
+{Колькі кантаў у поўным графе $K_n$?}
+{Сколько рёбер в полном графе $K_n$?}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Знайдзіце акружэнні $N(u)$ і $N(v)$ вяршынь $u$ і $v$ у кожным з трох графаў, паказаных на малюнку:}
+{Найдите окружения $N(u)$ и $N(v)$ вершин $u$ и $v$ в каждом из трёх графов, изображённых на рисунке:}
+{%
+\begin{center}
+    \includegraphics[scale=0.7]{figure_01}
+\end{center}
+}
+
+\problemItemSimple
+{Дакажыце, што найбольшая колькасць кантаў у графе парадку $n$, які не змяшчае трохкутнікаў, роўная $n^2/4$.}
+{Докажите, что наибольшее число рёбер в графе порядка $n$, не содержащем треугольников, равно $n^2/4$.}
+
+\bigskip
+
+\problemItemSimple
+{Знайдзіце ўсе двудольныя графы парадку $n$, колькасць кантаў якіх роўная $n^2/4$.}
+{Найдите все двудольные графы порядка $n$, число рёбер которых равно $n^2/4$.}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Дакажыце, што два графы, паказаныя на малюнку, ізаморфныя:}
+{Докажите, что два графа, изображённые на рисунке, изоморфны:}
+{%
+\begin{center}
+    \includegraphics[scale=0.7]{figure_02}
+\end{center}
+}
+
+\problemItemWithCommonPart
+{Дакажыце, што графы, паказаныя на малюнку, не ізаморфныя:}
+{Докажите, что графы, изображённые на рисунке, не изоморфны:}
+{%
+\begin{center}
+    \includegraphics[scale=0.7]{figure_03}
+\end{center}
+}
+
+\problemItemWithCommonPart
+{Ці існуе граф з дадзенай ступеннай паслядоўнасцю?
+Калі так, то знайдзіце колькасць кантаў у графе,
+ступенная паслядоўнасць якога супадае з адной з наступных:}
+{Существует ли граф с указанной степенной последовательностью?
+Если да, то найдите число рёбер в графе,
+степенная последовательность которого совпадает с одной из следующих:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item (3, 3, 3, 3, 3, 3);
+    \item (3, 3, 2, 2, 2, 2);
+    \item (6, 5, 4, 4, 3, 3, 2, 2);
+    \item (7, 6, 5, 4, 4, 3, 2, 1).
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPartComplicated
+{Знайдзіце дадатковы граф $\overline{G}$ для кожнага з графаў $G$:}
+{Найдите дополнительный граф $\overline{G}$ для каждого из графов $G$:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $G=O_n$;
+    \item $G=K_n$;
+    \item $G=C_4$;
+    \item $G=P_4$;
+\end{belarusianEnumerateTwocol}
+}
+{Якія з прыведзеных графаў з'яўляюцца самададатковымі?}
+{Какие из указанных графов являются самодополнительными?}
+
+\bigskip
+
+\problemItemSimple
+{%
+\begin{belarusianEnumerate}
+    \item Для $(n,m)$-графа $G$ знайдзіце колькасць кантаў у самададатковым графе $\overline{G}$.
+    Колькі кантаў у самададатковым графе парадку $n$?
+    \item Дакажыце, што калі $n$ "--- парадак самададатковага графа,
+    то $n\equiv 0\pmod 4$ ці $n \equiv 1 \pmod 4$;
+    \item Дакажыце, што для кожнага $n\ge 1$, які адпавядае ўмове $n\equiv 0\pmod 4$
+    ці $n \equiv 1 \pmod 4$, існуе самададатковы граф парадку $n$.
+\end{belarusianEnumerate}\\[-30pt]
+}
+{%
+\begin{russianEnumerate}
+    \item Для $(n,m)$-графа $G$ найдите число рёбер в доплонительном графе $\overline{G}$.
+    Сколько рёбер в самодополнительном графе порядка $n$?
+    \item Докажите, что если $n$ "--- порядок самодополнительного графа, 
+    то $n\equiv 0\pmod 4$ или $n \equiv 1 \pmod 4$;
+    \item Докажите, что для каждого $n\ge 1$, удовлетворяющего условию $n\equiv 0\pmod 4$ 
+    или $n \equiv 1 \pmod 4$, существует самодополнительный граф порядка $n$.
+\end{russianEnumerate}
+}
+
+\bigskip
+
+\problemItemSimple
+{Пабудуйце граф $C_4\times P_3$.}
+{Постройте граф $C_4\times P_3$.}
+
+\bigskip
+
+\problemItemSimple
+{Няхай $d_1, d_2, \ldots, d_n$ "--- ступенная паслядоўнасць графа $G$,
+а $d_1', d_2', \ldots, d_n'$ "--- ступенная паслядоўнасць графа $G'$.
+Якая ступенная паслядоўнасць у графа $G\times G'$?}
+{Пусть $d_1, d_2, \ldots, d_n$ "--- степенная последовательность графа $G$,
+а $d_1', d_2', \ldots, d_n'$ "--- степенная последовательность графа $G'$.
+Какая степенная последовательность у графа $G\times G'$?}
+
+\bigskip
+
+\problemItemSimple
+{Знайдзіце простыя цыклы даўжыні 5, 6, 8 і 9 у графе Петэрсана.}
+{Найдите простые циклы длины 5, 6, 8 и 9 в графе Петерсена.}
+
+\bigskip
+
+\problemItemSimple
+{Дакажыце, што калі ў графе ёсць роўна дзве вяршыні няцотных ступеняў,
+то ў ім ёсць ланцуг, які злучае гэтыя вяршыні.}
+{Докажите, что если в графе есть ровно две вершины нечётных степеней,
+то в нём есть соединяющая эти вершины цепь.}
+
+\bigskip
+
+\problemItemSimple
+{Знайдзіце дыяметр графа $P^2_n$.}
+{Найдите диаметр графа $P^2_n$.}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Знайдзіце радыюс, дыяметр, цэнтр і перыферыю наступных графаў:}
+{Найдите радиус, диаметр, центр и периферию следующих графов:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $K_n$;
+    \item $P_n$;
+    \item $C_n$;
+    \item граф Петэрсана.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart[*]
+{Паказаць, што для любога графа $G$ справядліва:}
+{Показать, что для любого графа $G$ справедливо:}
+{\[ \sum\limits_{\{u, v\}\in E(G)} (\deg u + \deg v) = \sum\limits_{w\in V(G)} \deg^2 w \]}
+
+\medskip
+
+\problemItemWithCommonPart[*]
+{Знайдзіце групу аўтамарфізмаў для:}
+{Найдите группу автоморфизмов для:}
+{%
+\begin{belarusianEnumerate}
+    \item $O_n$;
+    \item $K_n$;
+    \item $P_n$;
+    \item $C_n$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart[*]
+{Колькі адрозных пазначаных простых цыклаў ёсць у графе $G$, калі}
+{Сколько различных помеченных простых циклов имеется в графе $G$, если}
+{%
+\begin{belarusianEnumerate}
+    \item $G=K_n$;
+    \item $G=K_{p, q}$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemSimple[*]
+{Няхай $G$ і $\overline{G}$ адначасова звязныя і $d(G) \ge 3$.
+Дакажыце, што $d(\overline{G}) \le 3$.}
+{Пусть $G$ и $\overline{G}$ одновременно связны и $d(G) \ge 3$.
+Докажите, что $d(\overline{G}) \le 3$.}
+
+\end{problemList}
+
+\end{document}

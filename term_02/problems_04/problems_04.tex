@@ -1,0 +1,140 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+
+\begin{document}
+
+\biLangHeader
+{4. Тэарэма Поста. Мінімізацыя булевых функцый.}
+{Теорема Поста. Минимизация булевых функций.}
+
+\biLangHeader
+{Тэарэма Поста.}
+{Теорема Поста.}
+
+\begin{problemList}
+    
+\problemItemWithCommonPart
+{Высветліце, ці з'яўляецца поўнай сістэма функцый:}
+{Выясните, полна ли система функций:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $A=\{xy\oplus z, x\oplus y\oplus 1\}$;
+    \item $A=\{xy, x\vee y, x\oplus y, xy\vee yz\vee zx\}$;
+    \item $A=\{xy, x\vee y, x\oplus y\oplus z\oplus 1\}$;
+    \item $A=\{1, \overline {x}, x(y\sim z)\oplus\overline{x}(y\oplus z), x\sim y\}$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Высветліце, ці з'яўляецца поўнай сістэма $A$ функцый, зададзеных вектарамі сваіх значэнняў:}
+{Выясните, полна ли система $A$ функций, заданных векторами своих значений:}
+{%
+\begin{belarusianEnumerate}
+    \item $A=\{f_1=(0110),\ f_2=(11000011),\ f_3=(10010110)\}$;
+    \item $A=\{f_1=(0111),\ f_2=(01011010),\ f_3=(01111110)\}$;
+    \item $A=\{f_1=(0111),\ f_2=(10010110)\}$;
+    \item $A=\{f_1=(0101),\ f_2=(11101000),\ f_3=(01101001)\}$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Высветліце, ці з'яўляецца сістэма $A$ поўнай:}
+{Выясните, полна ли система $A$:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $A=(S\setminus M)\cup L\setminus(T_0\cup T_1)$;
+    \item $A=(S\cap M)\cup(L\setminus M)$;
+    \item $A=(L\cap T_1\cap T_0)\cup S\setminus(T_0\cup T_1)$;
+    \item $A=(L\cap T_1)\cup(S\cap M)$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart[*]
+{Высветліце, ці з'яўляецца поўнай сістэма функцый $A=\{f_1, f_2\}$:}
+{Выясните, полна ли система функций $A=\{f_1, f_2\}$:}
+{%
+\begin{belarusianEnumerate}
+    \item $f_1\in S\setminus M$, $f_2\not\in L\cup S$, $f_1 \rightarrow f_2 \equiv 1$;
+    \item $f_1\not\in L \cup T_0 \cup T_1$, $f_2\in M\cap L$, $f_1 \rightarrow f_2 \equiv 1$.
+\end{belarusianEnumerate}
+}
+
+\end{problemList}
+
+\biLangHeader
+{Мінімізацыя булевых функцый.}
+{Минимизация булевых функций.}
+
+\begin{problemList}
+
+\problemItemWithCommonPart
+{З зададзенага мноства $A$ элементарных кан'юнкцый вылучыце простыя імпліканты функцыі~$f$:}
+{Из заданного множества $A$ элементарных конъюнкций выделите простые импликанты функции~$f$:}
+{%
+\begin{belarusianEnumerate}
+    \item $A=\{x_1, \overline{x}_3, x_1x_2, x_2\overline{x}_3\}$, $\underline{w}(f)=(00101111)$;
+    \item $A=\{x_1\overline{x}_2, x_2x_3, x_1x_2x_3\}$, $\underline{w}(f)=(01111110)$;
+    \item $A=\{x_1, \overline{x}_4, x_2\overline{x}_3, \overline{x}_1\overline{x}_2\overline{x}_4\}$, $\underline{w}(f)=(1010111001011110)$;
+    \item $A=\{x_1, x_2, x_1\overline{x}_2\}$, $\underline{w}(f)=(1011)$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{З дапамогай алгарытма Квайна пабудуйце скарочаную ДНФ для функцыі $f$,
+зададзенай вектарам сваіх значэнняў:}
+{С помощью алгоритма Квайна постройте сокращённую ДНФ для функции $f$, 
+заданной вектором своих значений:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $\underline{w}(f)=(00011111)$;
+    \item $\underline{w}(f)=(01110110)$;
+    \item $\underline{w}(f)=(10111101)$;
+    \item $\underline{w}(f)=(00101111)$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Па зададзенай ДНФ $D$ з дапамогай метада Блэйка пабудуйце скарочаную ДНФ:}
+{По заданной ДНФ $D$ с помощью метода Блейка постройте сокращённую ДНФ:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $D=x_1x_2\vee \overline{x}_1x_3\vee \overline{x}_2x_3$;
+    \item $D=\overline{x}_1\overline{x}_2\vee x_1\overline{x}_2x_4\vee x_2\overline{x}_3x_4$;
+    \item $D=x_1\overline{x}_2x_3\vee \overline{x}_1x_2\overline{x}_4\vee \overline{x}_2\overline{x}_3x_4$;
+    \item $D=x_1\vee\overline{x}_1x_2\vee \overline{x}_1\overline{x}_2x_3\vee \overline{x}_1x_2x_3x_4$.
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPart[*]
+{Знайдзіце даўжыню скарочанай ДНФ функцыі $f$:}
+{Найдите длину сокращённой ДНФ функции $f$:}
+{%
+\begin{belarusianEnumerate}
+    \item $f=x_1\oplus x_2\oplus \ldots \oplus x_n$;
+    \item $f=(x_1\vee x_2)(x_3\vee x_4)\ldots(x_{2n-1}\vee x_{2n})$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemSimple[*]
+{Пакажыце, што простая імпліканта манатоннай функцыі не змяшчае адмаўленняў зменных.}
+{Покажите, что простая импликанта монотонной функции не содержит отрицаний переменных.}
+
+\end{problemList}
+
+\end{document}

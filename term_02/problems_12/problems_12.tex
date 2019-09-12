@@ -1,0 +1,129 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+
+\begin{document}
+
+\biLangHeader
+{12. Машыны Цьюрынга.}
+{Машины Тьюринга.}
+
+\begin{problemList}
+
+\problemItemWithCommonPartComplicated
+{Няхай $M_1$ "--- машына Цьюрынга, з $\Sigma=\{a\}$, $Q=\{q_0, q_1, q_2\}$ і $\delta$, якія апісваюцца наступнай табліцай:}
+{Пусть $M_1$ "--- машина Тьюринга, с $\Sigma=\{a\}$, $Q=\{q_0, q_1, q_2\}$ и $\delta$, описывающееся следующей таблицей:}
+{%    
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        & $q_1$ & $q_2$ \\ \hline
+        $a$ & $\lambda q_2 +1$ & $aq_2-1$ \\ \hline
+        $\lambda$ & $aq_00$ & $\lambda q_1 +1$ \\ \hline
+    \end{tabular}
+\end{center}
+}
+{Які будзе працэс вылічэння на словах $aaaa$ і $a\lambda\lambda a$?}
+{Каким будет процесс вычисления на словах $aaaa$ и $a\lambda\lambda a$?}
+
+\bigskip
+
+\problemItemWithCommonPartComplicated
+{Няхай $M_1$ "--- машына Цьюрынга, з $\Sigma=\{a\}$, $Q=\{q_0, q_1, q_2, q_3\}$ и $\delta$, якія апісваюцца наступнай табліцай:}
+{Пусть $M_1$ "--- машина Тьюринга, с $\Sigma=\{a\}$, $Q=\{q_0, q_1, q_2, q_3\}$ и $\delta$, описывающееся следующей таблицей:}
+{%
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        & $q_1$ & $q_2$ & $q_3$ \\ \hline
+        $a$ & $aq_2+1$ & $aq_20$ & $aq_1+1$ \\ \hline
+        $\lambda$ & $aq_2+1$ & $aq_3+1$ & $aq_00$\\ \hline
+    \end{tabular}
+\end{center}
+}
+{Які будзе працэс вылічэння на словах $aaa$, $a\lambda\lambda a$ і $aa\lambda\lambda\lambda a$?}
+{Каким будет процесс вычисления на словах $aaa$, $a\lambda\lambda a$ и $aa\lambda\lambda\lambda a$?}
+
+\bigskip
+
+\problemItemSimple
+{%
+Пабудуйце машыну Цьюрынга, якая распазнае мову $L$:
+\begin{belarusianEnumerate}
+    \item $L$ складаецца з усіх цотных лікаў ва ўнарным запісе;
+    \item $L=\{ww^R|w\in\{0, 1\}^*\}$;
+    \item $L=\{a^mb^n|m\le n\}$;
+    \item $L=\{a^mb^nc^{n+m}|n, m\ge 0\}$.
+\end{belarusianEnumerate}
+}
+{%
+Постройте машину Тьюринга, распознающую язык $L$:
+\begin{russianEnumerate}
+    \item $L$ состоит из всех чётных чисел в унарной записи;
+    \item $L=\{ww^R|w\in\{0, 1\}^*\}$;
+    \item $L=\{a^mb^n|m\le n\}$;
+    \item $L=\{a^mb^nc^{n+m}|n, m\ge 0\}$.
+\end{russianEnumerate}
+}
+
+\bigskip
+
+\problemItemSimple
+{Пабудуйце машыну Цьюрынга, якая пераводзіць лік з унарнай сістэмы злічэння ў траічную.}
+{Постройте машину Тьюринга, переводящую число из унарной системы счисления в троичную.}
+
+\bigskip
+
+\problemItemSimple
+{Пабудуйце машыну Цьюрынга $R_m$, якая вылічвае астачу ад дзялення ліку,
+запісанага ва ўнарнай сістэме злічэння, на $m$.}
+{Постройте машину Тьюринга $R_m$, вычисляющую остаток от деления числа,
+записанного в унарной системе счисления, на $m$.}
+
+\bigskip
+ 
+\problemItemWithCommonPart
+{Пабудуйце машыну Цьюрынга, якая вылічвае функцыю:}
+{Постройте машину Тьюринга, вычисляющую функцию:}
+{%
+\begin{belarusianEnumerate}
+    \item $f(n)=n+1$;
+    \item $f(m, n)=max\{m, n\}$;
+    \item $\pi_2^2(n_1, n_2)=n_2$;
+    \item $\forall 1\ge i \ge k\ \pi_{i}^k(x_1, \ldots, x_k)=x_i$;
+    \item $sub(n, m)=
+    \begin{cases}
+        n-m,\ n\ge m \ge 0\\
+        0,\ m > n \ge 0
+    \end{cases}$
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemSimple[*]
+{Пабудуйце машыну Цьюрынга, якая распазнае мову $L=\{ww|w\in\{0, 1\}^*\}$.}
+{Постройте машину Тьюринга, распознающую язык $L=\{ww|w\in\{0, 1\}^*\}$.}
+
+\bigskip
+
+\problemItemSimple[*]
+{Пабудуйце машыну Цьюрынга, якая пераводзіць лік з унарнай сістэмы злічэння ў дзесяцічную.}
+{Постройте машину Тьюринга, переводящую число из унарной системы счисления в десятичную.}
+
+\bigskip
+
+\problemItemWithCommonPart[*]
+{Пабудуйце машыну Цьюрынга, якая вылічвае функцыю:}
+{Постройте машину Тьюринга, вычисляющую функцию:}
+{%
+\begin{belarusianEnumerate}
+    \item $mult(n, m)=nm$;
+    \item $insert_i^k(x_1, \ldots, x_k, y)=(x_1, \ldots, x_{i-1}, y, x_i, \ldots, x_k)$.
+\end{belarusianEnumerate}
+}
+
+\end{problemList}
+
+\end{document}

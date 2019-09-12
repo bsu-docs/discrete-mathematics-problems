@@ -1,0 +1,181 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\biLangHeader
+{11. Дэтэрмінаваныя і недэтэрмінаваныя канечныя аўтаматы.}
+{Детерминированные и недетерминированные конечные автоматы.}
+
+\begin{problemList}
+
+\problemItemWithCommonPartComplicated
+{Няхай дадзены ДКА $M=(Q, \Sigma, \delta, q_0, F)$,
+дзе $Q=\{q_0, q_1, q_2, q_3\}$, $\Sigma=\{0, 1\}$, $F=\{q_1, q_2\}$, а $\delta$ вызначаная наступнай табліцай:}
+{Пусть дан ДКА $M=(Q, \Sigma, \delta, q_0, F)$,
+где $Q=\{q_0, q_1, q_2, q_3\}$, $\Sigma=\{0, 1\}$, $F=\{q_1, q_2\}$, а $\delta$ определена следующей таблицей:}
+{%
+\[
+\begin{matrix}
+\delta & 0 & 1 \\
+q_0 & q_1 & q_3 \\
+q_1 & q_2 & q_3 \\
+q_2 & q_2 & q_2 \\
+q_3 & q_3 & q_3	
+\end{matrix}
+\]
+}
+{%
+\begin{belarusianEnumerate}
+    \item Пакажыце $M$ у выглядзе графа;
+    \item Ці прымае $M$ радок 000? А радок 010?
+    \item Якую мову $L(M)$ спараджае гэты ДКА? 
+\end{belarusianEnumerate}\\[-15pt]
+}
+{%
+\begin{russianEnumerate}
+    \item Изобразите $M$ в виде графа;
+    \item Принимает ли $M$ строку 000? А строку 010?
+    \item Какой язык $L(M)$ порождает этот ДКА? 
+\end{russianEnumerate}
+}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Якую мову спараджае ДКА, паказаны на малюнку?}
+{Какой язык порождает ДКА, изображённый на рисунке?}
+{%
+\begin{center}
+    \includegraphics[scale=0.8]{figure_01}
+\end{center}
+}
+
+\problemItemWithCommonPart
+{Якую мову спараджае ДКА, паказаны на малюнку?}
+{Какой язык порождает ДКА, изображённый на рисунке?}
+{%
+\begin{center}
+    \includegraphics[scale=0.9]{figure_02}
+\end{center}
+}
+
+\problemItemWithCommonPart
+{Пабудуйце ДКА, які спараджае мову $L$:}
+{Постройте ДКА, который порождает язык $L$:}
+{%
+\begin{belarusianEnumerate}
+    \item $L_1=\{0, 1\}^*$;
+    \item $L_2=\{01w|\ w\in\{0, 1\}^*\}$;
+    \item $L_3=\{w|\ w\in\{0, 1\}^*, 00 \text{ з'яўляецца падрадком }w\}$;
+    \item $L_4=\{w|w\in\{0, 1\}^*, w\ \text{"--- дваічнае ўяўленне ліку, які дзеліцца на 5}\}$;
+    \item $L_5=L_2\cup L_3$;
+    \item $L_6=L_2\cap L_3$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemSimple
+{%
+Пабудуйце НДКА, які спараджае мову $L$:
+\begin{belarusianEnumerate}
+    \item $L$ складаецца з усіх бінарных радкоў, якія змяшчаюць $010$ у якасці падрадка;
+    \item $L$ складаецца з усіх бінарных радкоў, якія пачынаюцца на $010$ ці сканчваюцца на $110$.
+\end{belarusianEnumerate}
+}
+{%
+Постройте НДКА, который порождает язык $L$:
+\begin{russianEnumerate}
+    \item $L$ состоит из всех бинарных строк, содержащих $010$ в качестве подстроки;
+    \item $L$ состоит из всех бинарных строк, начинающихся на $010$ или оканчивающихся на $110$.
+\end{russianEnumerate}
+}
+
+\bigskip
+
+\problemItemWithCommonPartComplicated
+{Няхай дадзены НДКА $M=(\{p, q, r\}, \{0, 1\}, \delta, p, \{q, r\})$, дзе}
+{Пусть дан НДКА $M=(\{p, q, r\}, \{0, 1\}, \delta, p, \{q, r\})$, где}
+{%
+\[
+\begin{matrix}
+\delta & 0 & 1 \\
+p & \{p, q\} & \{p\} \\
+q & - & \{r\} \\
+r & - & - \\
+\end{matrix}
+\]
+}
+{Пабудуйце эквівалентны яму ДКА.}
+{Постройте эквивалентный ему ДКА.}
+
+\bigskip
+
+\problemItemWithCommonPartComplicated
+{Няхай дадзены НДКА $M=(Q, \{0, 1\}, \delta, q_0, F)$, дзе $Q=\{q_0, q_1, q_2, q_3, q_4, q_5\}$, $F=\{q_3, q_4\}$ і}
+{Пусть дан НДКА $M=(Q, \{0, 1\}, \delta, q_0, F)$, где $Q=\{q_0, q_1, q_2, q_3, q_4, q_5\}$, $F=\{q_3, q_4\}$ и}
+{%
+\[
+\begin{matrix}
+\delta & 0 & 1 & \epsilon \\
+q_0 & \{q_0\} & \{q_0, q_2\} & \{q_1\} \\
+q_1 & \{q_5\} & \{q_2\} & -\\
+q_2 & \{q_3\} & - & - \\
+q_3 & - & - & \{q_4\} \\
+q_4 & \{q_3\} & - & - \\
+q_5 & - & \{q_4\} & -
+\end{matrix}
+\]
+}
+{Пабудуйце эквівалентны яму ДКА.}
+{Постройте эквивалентный ему ДКА.}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Пабудуйце ДКА, які спараджае тую ж мову, што і рэгулярны выраз:}
+{Постройте ДКА, порождающий тот же язык, что и регулярное выражение:}
+{%
+\begin{belarusianEnumerate}
+    \item $10+(0+11)0^*1$;
+    \item $(0+10)^*(1+01)^*$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Па НДКА, паказаным на малюнку, пабудуйце рэгулярны выраз, які прымае тую ж мову:}
+{По НДКА, изображённому на рисунке, постройте регулярное выражение, которое принимает тот же язык:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item \includegraphics[scale=0.92]{figure_03}
+    \item \includegraphics[scale=1.05]{figure_04}
+\end{belarusianEnumerateTwocol}
+}
+
+\smallskip
+
+\problemItemWithCommonPartComplicated[*]
+{Вызначым наступную аперацыю множання на мностве $\{a, b, c\}$:}
+{Определим следующую операцию умножения на множестве $\{a, b, c\}$:}
+{%
+\[
+\begin{matrix}
+\times & a & b & c \\
+a & c & a & b \\
+b & b & c & a \\
+c & c & b & c
+\end{matrix}
+\]
+}
+{Для кожнага радка з из $\{a, b, c\}^+$ вызначым аперацыю $value(w)$ як значэнне, якое атрымліваецца пры прымяненні паслядоўна аперацыі множання на сімвалах радка $w$ злева направа. Напрыклад, $value(abcb) = ((a\times b)\times c)\times b=c$. Пабудуйце НДКА, які спараджае мову $L$, які складаецца з усіх радкоў $w$ над алфавітам $\{a, b, c\}$ такіх, што $value(w)=value(w^R)$.}
+{Для каждой строки из $\{a, b, c\}^+$ определим операцию $value(w)$ как значение, которое получается при применении последовательно операции умножения на символах строки $w$ слева направо. Например, $value(abcb) = ((a\times b)\times c)\times b=c$. Постройте НДКА, который порождает язык $L$, состоящий из всех строк $w$ над алфавитом $\{a, b, c\}$ таких, что $value(w)=value(w^R)$.}
+
+\end{problemList}
+
+\end{document}

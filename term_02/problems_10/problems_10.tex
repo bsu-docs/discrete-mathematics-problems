@@ -1,0 +1,163 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+\graphicspath{{figures/}}
+
+\begin{document}
+
+\biLangHeader
+{10. Аўтаматныя граматыкі і рэгулярныя выразы. Лемы <<аб напампоўцы>>.}
+{Автоматные грамматики и регулярные выражения. Леммы <<о накачке>>.}
+
+\begin{center}
+    \includegraphics[scale=0.7]{figure_01}
+\end{center}    
+
+\biLangHeader
+{Аўтаматныя граматыкі і рэгулярныя выразы.}
+{Автоматные грамматики и регулярные выражения.}
+
+\begin{problemList}
+
+\problemItemSimple
+{%
+Знайдзіце аўтаматную граматыку (і адпаведны рэгулярны выраз),
+якая спараджае мову, што складаецца з:
+\begin{belarusianEnumerate}
+    \item дваічных уяўленняў лікаў, якія з'яўляюцца ступенямі 4;
+    \item усіх радкоў з 0 і 1, якія змяшчаюць радок 001 у якасці падрадка;
+    \item усіх радкоў з 0 і 1, якія не змяшчаюць радок 001 у якасці падрадка;
+    \item усіх радкоў з 0 і 1, у якіх не больш за адну пару нулёў, якія ідуць запар;
+    \item усіх радкоў з 0 і 1, у якіх у любым прэфіксе розніца паміж колькасцю 0 і колькасцю 1 не больш за адзін.
+\end{belarusianEnumerate}
+}
+{%
+Найдите автоматную грамматику (и соответствующее регулярное выражение),
+которая порождает язык, состоящий из:
+\begin{russianEnumerate}
+    \item двоичных представлений чисел, являющихся степенями 4;
+    \item всех строк из 0 и 1, содержащих строку 001 в качестве подстроки;
+    \item всех строки из 0 и 1, не содержащих строку 001 в качестве подстроки;
+    \item всех строки из 0 и 1, у которых не более одной пары подряд идущих 0;
+    \item всех строки из 0 и 1, у которых в любом префиксе разница между количеством 0 и количеством 1 не больше одного.
+\end{russianEnumerate}
+}
+
+\bigskip
+
+\problemItemSimple[*]
+{Пабудуйце аўтаматную граматыку, якая спараджае ўсе радкі з арабскіх лічбаў,
+якія не змяшчаюць дзве аднолькавыя лічбы запар.}
+{Постройте автоматную грамматику, которая порождает все строки из арабских цифр,
+которые не содержат две одинаковые цифры подряд.}
+
+\bigskip
+
+\problemItemSimple[*]
+{%
+Пабудуйце аўтаматную граматыку над алфавітам
+\[
+\left\{
+\begin{pmatrix} 0 \\ 0\\ 0 \end{pmatrix},
+\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix},
+\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix},
+\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix},
+\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix},
+\begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix},
+\begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix},
+\begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}
+\right\}
+\]
+Слова павінна належыць спараджальнай мове,
+калі яно апісвае карэктнае прымяненне аперацыі складання над дваічнымі лікамі. Напрыклад, раз
+\[
+\begin{matrix}
+& 0 & 1 & 1 & 0 \\
++ & 0& 1& 0& 1 \\
+\hline
+& 1& 0& 1& 1
+\end{matrix}
+\]
+то радок 
+\[
+\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}
+\begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}
+\begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}
+\]
+належыць гэтай мове.
+}
+{%
+Постройте автоматную грамматику над алфавитом
+\[
+\left\{
+\begin{pmatrix} 0 \\ 0\\ 0 \end{pmatrix},
+\begin{pmatrix} 1 \\ 0 \\ 0 \end{pmatrix},
+\begin{pmatrix} 0 \\ 1 \\ 0 \end{pmatrix},
+\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix},
+\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix},
+\begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix},
+\begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix},
+\begin{pmatrix} 1 \\ 1 \\ 1 \end{pmatrix}
+\right\}
+\]
+Слово должно принадлежать порождаемому языку,
+если оно описывает корректное применение операции сложения над двоичными числами. Например, т.к.
+\[
+\begin{matrix}
+& 0 & 1 & 1 & 0 \\
++ & 0& 1& 0& 1 \\
+\hline
+& 1& 0& 1& 1
+\end{matrix}
+\]
+то строка 
+\[
+\begin{pmatrix} 0 \\ 0 \\ 1 \end{pmatrix}
+\begin{pmatrix} 1 \\ 1 \\ 0 \end{pmatrix}
+\begin{pmatrix} 1 \\ 0 \\ 1 \end{pmatrix}
+\begin{pmatrix} 0 \\ 1 \\ 1 \end{pmatrix}
+\]
+принадлежит этому языку.
+}
+
+\end{problemList}
+
+\biLangHeader
+{Лемы <<аб напампоўцы>>.}
+{Леммы <<о накачке>>.}
+
+\begin{problemList}
+
+\problemItemWithCommonPart
+{Дакажыце, што мова не з'яўляецца А-мовай:}
+{Докажите, что язык не является А-языком:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $\{0^p\ |\ p - \text{просты лік}\}$
+    \item $\{0^n1^n\ |\ n\ge 0\}$
+    \item $\{\beta\beta^R\ |\ \beta\in\{0, 1\}^+\}$
+    \item $\{\beta\beta^R\gamma\ |\ \beta\in\{0, 1\}^+, \gamma\in\{0, 1\}^*\}$
+\end{belarusianEnumerateTwocol}
+}
+
+\problemItemWithCommonPart
+{Дакажыце, што мова не з'яўляецца КС-мовай:}
+{Докажите, что язык не является КС-языком:}
+{%
+\begin{belarusianEnumerateTwocol}
+    \item $\{a^nb^nc^n\ |\ n\ge 0\}$
+    \item $\{ww\ |\ w\in\{0, 1\}^*\}$
+    \item $\{0^n1^m\ |\ m\le n^2\}$
+    \item $\{a^ib^jc^k\ |\ k=\max\{i, j\}\}$
+\end{belarusianEnumerateTwocol}
+}
+
+\problemItemSimple[*]
+{Дакажыце, што мова, аналагічная мове з задачы 3* тэмы <<Аўтаматныя граматыкі і рэгулярныя выразы.>>, але вызначаная для аперацыі множання, не з'яўляецца A-мовай.}
+{Докажите, что язык, аналогичный языку из задачи 3* темы <<Автоматные грамматики и регулярные выражения.>>, но определённый для операции умножения, не является А-языком.}
+
+\end{problemList}
+
+\end{document}

@@ -1,0 +1,162 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage{import}
+\subimport{../../common/}{preamble}
+
+\begin{document}
+
+\biLangHeader
+{9. Паняцце спараджальнай граматыкі, класы граматык. Кантэкстна-свабодныя граматыкі.}
+{Понятие порождающей грамматики, классы грамматик. Контекстно-свободные грамматики.}
+
+\begin{problemList}
+
+\problemItemSimple
+{Колькі існуе слоў даўжыні $n \ge 0$ над алфавітам $A=\{a_1, \ldots, a_k\}$?}
+{Сколько существует слов длины $n \ge 0$ над алфавитом $A=\{a_1, \ldots, a_k\}$?}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Дакажыце, што для любых моў $A$ і $B$ справядліва:}
+{Докажите, что для любых языков $A$ и $B$ верно:}
+{\[ (A\cup B)^*=A^*(BA^*)^* \]}
+
+\medskip
+
+\problemItemSimple
+{Ці праўда, што $(A^R)^*=(A^*)^R$ для любой мовы $A$?}
+{Правда ли что $(A^R)^*=(A^*)^R$ для любого языка $A$?}
+
+\bigskip
+
+\problemItemSimple
+{Якая мова спараджаецца граматыкай $G=(\{0, 1\}, \{S\}, S, \{S\rightarrow \epsilon, S\rightarrow 0S1\})$?}
+{Какой язык пораждается грамматикой $G=(\{0, 1\}, \{S\}, S, \{S\rightarrow \epsilon, S\rightarrow 0S1\})$?}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Складзіце кантэкстна-свабодную граматыку, якая спараджае мову $L$:}
+{Составьте контекстно-свободную грамматику, порождающую язык $L$:}
+{%
+\begin{belarusianEnumerate}
+    \item $L=\{0^n1^{2n}|n\ge 0\}$;
+    \item $L=\{x\in\{0, 1\}^*|x=x^R\}$;
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Апішыце мову, спароджаную граматыкай з правіламі:}
+{Опишите язык, порождённый грамматикой с правилами:}
+{%
+\begin{belarusianEnumerate}
+    \item $S\rightarrow aSa\ |\ bSb\ |\ a\ |\ b$;
+    \item $S\rightarrow aS\ |\ bS\ |\ \epsilon$;
+    \item $S\rightarrow aS\ |\ Sb\ |\ a$.
+\end{belarusianEnumerate}
+}
+
+\smallskip
+
+\problemItemWithCommonPart
+{Дакажыце, што ніводнае слова з мовы $L(G)$ не змяшчае радок $ba$ у якасці падрадка,
+дзе $G$ "--- граматыка з наступнымі правіламі:}
+{Докажите, что ни одно слово из языка $L(G)$ не содержит строку $ba$ в качестве подстроки,
+где $G$ "--- грамматика со следующими правилами:}
+{%
+\[ S \rightarrow aS\ |\ bT\ |\ a \]
+\[ T \rightarrow bT\ |\ b \]
+}
+
+\medskip
+
+\problemItemWithCommonPart
+{Дакажыце, што ў любым слове з мовы $L(G)$ больш літар $a$, чым літар $b$,
+дзе $G$ "--- граматыка з наступнымі правіламі:}
+{Докажите, что в любом слове из языка $L(G)$ больше букв $a$, чем букв $b$,
+где $G$ "--- грамматика со следующими правилами:}
+{ \[ S\rightarrow Sa\ |\ bSS\ |\ SSb\ |\ SbS\ |\ a \] }
+
+\medskip
+
+\problemItemSimple
+{%
+\begin{belarusianEnumerate}
+    \item Дакажыце, што граматыка не спараджае мову $L=\{x\in\{0, 1\}^*|\ x\text{ змяшчае роўную}
+    \\\text{колькасць літар 0 і 1}\}$:
+    \[ S\rightarrow 0S1\ |\ 01S\ |\ 1S0\ |\ 10S\ |\ S01\ |\ S10\ |\ \epsilon \]
+    \item Дакажыце, што граматыка спараджае мову $L=\{x\in\{0, 1\}^*|\ x\text{ змяшчае роўную}
+    \\\text{колькасць літар 0 і 1}\}$:
+    \[ S\rightarrow SS\ |\ 0S1\ |\ 1S0\ |\ \epsilon \]
+\end{belarusianEnumerate}
+}
+{%
+\begin{russianEnumerate}
+    \item Докажите, что следующая грамматика не порождает язык $L=\{x\in\{0, 1\}^*|\ x\text{ содержит равное}
+    \\\text{количество букв 0 и 1}\}$:
+    \[ S\rightarrow 0S1\ |\ 01S\ |\ 1S0\ |\ 10S\ |\ S01\ |\ S10\ |\ \epsilon \]
+    \item Докажите, что следующая грамматика порождает язык $L=\{x\in\{0, 1\}^*|\ x\text{ содержит равное}
+    \\\text{количество букв 0 и 1}\}$:
+    \[ S\rightarrow SS\ |\ 0S1\ |\ 1S0\ |\ \epsilon \]
+\end{russianEnumerate}
+}
+
+\bigskip
+
+\problemItemWithCommonPart
+{Для мовы $L$ складзіце КС-граматыку, якая спараджае гэту мову:}
+{Для языка $L$ составьте КС-грамматику, порождающую этот язык:}
+{%
+\begin{belarusianEnumerate}
+    \item $L=\{a^nb^m|\ m\ge n, m-n \text{ чётно}\}$;
+    \item $L=\{xc^n|\ x\in\{a, b\}^*, |x|_a=n \text{ или } |x|_b=n\}$;
+    \item $L=\{xc^n|\ x\in\{a, b\}^*, |x|_a+|x|_b \ge n\}$;
+    \item $L=\{a^mb^nc^pd^q|\ m+n=p+q\}$;
+    \item $L=\{a^mb^nc^p|\ m+2n\ge p\}$;
+    \item $L=\{0^m1^n|\ m\neq n, m\ge 0, n \ge 0\}$;
+\end{belarusianEnumerate}
+}
+
+\problemItemSimple[*]
+{Няхай $A$, $B$ "--- дзве мовы, такія, што $\epsilon \not\in A$ і $X$ "--- мова,
+якая адпавядае судачэненню $X=AX\cup B$. Дакажыце, што $X=A^*B$.}
+{Пусть $A$, $B$ "--- два языка, таких, что $\epsilon \not\in A$ и $X$ "--- язык,
+удовлетворяющий соотношению $X=AX\cup B$. Докажите, что $X=A^*B$.}
+
+\bigskip
+
+\problemItemWithCommonPartComplicated[*]
+{Няхай мовы $A, B\subseteq \{a, b\}^*$ адпавядаюць наступным судачыненням:}
+{Пусть языки $A, B\subseteq \{a, b\}^*$ удовлетворяют следующим соотношениям:}
+{%
+\[
+\begin{cases}
+A=\{\epsilon\}\cup\{a\}A\cup\{b\}B, \\
+B=\{\epsilon\}\cup\{b\}B
+\end{cases}
+\]
+}
+{Знайдзіце простыя прадстаўленні для $A$ і $B$.}
+{Найдите простые представления для $A$ и $B$.}
+
+\bigskip
+
+\problemItemWithCommonPart[*]
+{Знайдзіце кантэкстна-свабодную граматыку, якая спараджае мову $L$:}
+{Найдите контекстно-свободную грамматику, порождающую язык $L$:}
+{%
+\begin{belarusianEnumerate}
+    \item $L=\{x\in\{a, b\}^*|\text{ любы прэфікс } x \text{ змяшчае літар } a \text{ не менш, чым літар } b\}$;
+    \item $L=\{x\in\{a, b\}^*|\ |x|_a = |x|_b\}$;
+    \item $L=\{x\in\{a, b\}^*|\ |x|_b = 2|x|_a\}$;
+    \item $L=\{a^mb^n|\ 3m \le 5n\le 4m\}$;
+    \item $L=\{x\in \{0, 1\}^*|\ x\neq ww\ \forall w\in \{0, 1\}^*\}$.
+\end{belarusianEnumerate}
+}
+
+\end{problemList}
+
+\end{document}
